@@ -13,18 +13,12 @@
                 extend: {
                     colors: {
                         royal: {
-                            deep: '#060b14',
-                            dark: '#0c162d',
-                            main: '#111e3c',
-                            light: '#1b2d56',
-                            accent: '#c5a059',
-                            accentLight: '#dfbe7e',
-                            navyLight: '#16223d',
-                            cream: '#fffdf9',
-                            ivory: '#fffefb',
-                            moon: '#f1f5f9',
-                            moonSurface: '#e2e8f0',
-                            surface: '#ffffff'
+                            deep: '#131C31',     /* أزرق داكن هادئ وغير حاد */
+                            dark: '#1E293B',
+                            accent: '#B8924B',   /* ذهبي دافئ وناعم */
+                            accentLight: '#D4B572',
+                            ivory: '#FAF8F5',     /* خلفية عاجية أهدأ وأكثر راحة للعين */
+                            surface: '#FFFFFF'
                         }
                     },
                     fontFamily: {
@@ -36,41 +30,88 @@
             }
         }
     </script>
-    <!-- Google Fonts: Fraunces & Plus Jakarta Sans -->
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f1f5f9 !important; color: #1e293b; }
-        h1, h2, h3, h4, .font-serif { font-family: 'Fraunces', serif; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #FAF8F5 !important; /* خلفية عاجية ناعمة جداً */
+            color: #2D3748; 
+        }
+        h1, h2, h3, h4, .font-serif { 
+            font-family: 'Fraunces', serif; 
+        }
         
-        .gold-gradient { background: linear-gradient(135deg, #c5a059 0%, #ecd499 50%, #c5a059 100%); }
+        @keyframes floatRoyal {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-5px) rotate(1deg); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 2px rgba(184, 146, 75, 0.3)); }
+            50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(184, 146, 75, 0.6)); }
+        }
+        
+        .royal-animated-icon {
+            animation: floatRoyal 4s ease-in-out infinite;
+        }
+        .royal-glow {
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        .gold-gradient { 
+            background: linear-gradient(135deg, #B8924B 0%, #D4B572 50%, #B8924B 100%); 
+        }
+        
+        .video-btn-royal {
+            background: #131C31;
+            border: 2px solid #B8924B;
+            color: #B8924B;
+            box-shadow: 0 6px 15px -3px rgba(184, 146, 75, 0.25);
+            transition: all 0.3s ease;
+        }
+        .video-btn-royal:hover {
+            transform: scale(1.04);
+            background: #B8924B;
+            color: #131C31;
+        }
+
         .text-gold-gradient {
-            background: linear-gradient(135deg, #dfbe7e 0%, #c5a059 100%);
+            background: linear-gradient(135deg, #D4B572 0%, #B8924B 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .royal-card-shadow { box-shadow: 0 20px 40px -15px rgba(6, 11, 20, 0.1); }
-        .glass-nav { background: rgba(12, 22, 45, 0.95); backdrop-filter: blur(12px); }
 
-        .moon-card-border {
-            border: 1px solid rgba(197, 160, 89, 0.3) !important;
-            box-shadow: 0 8px 20px -4px rgba(197, 160, 89, 0.08) !important;
-            background-color: #ffffff !important;
-            color: #0f172a !important;
-            border-radius: 1rem !important;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        .glass-nav { 
+            background: rgba(19, 28, 49, 0.96); 
+            backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(184, 146, 75, 0.2);
         }
-        .moon-card-border:hover {
+
+        .royal-card {
+            border: 1px solid rgba(184, 146, 75, 0.3);
+            background-color: #FFFFFF;
+            color: #2D3748;
+            border-radius: 1rem;
+            box-shadow: 0 8px 25px -8px rgba(19, 28, 49, 0.05);
+            transition: all 0.3s ease;
+        }
+        .royal-card:hover {
             transform: translateY(-3px);
-            border-color: #c5a059 !important;
-            box-shadow: 0 12px 25px -6px rgba(197, 160, 89, 0.18) !important;
+            border-color: #B8924B;
+            box-shadow: 0 15px 30px -8px rgba(184, 146, 75, 0.12);
+        }
+
+        .gold-featured-box {
+            background-color: #131C31;
+            color: #FFFFFF;
+            border: 2px solid #B8924B;
+            border-radius: 1.25rem;
+            box-shadow: 0 12px 30px -6px rgba(184, 146, 75, 0.15);
         }
 
         .card-header-flow {
@@ -78,40 +119,41 @@
             align-items: center;
             justify-content: space-between;
             gap: 4px;
-            padding-bottom: 6px;
-            margin-bottom: 6px;
-            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(45, 55, 72, 0.08);
             flex-wrap: wrap;
         }
+
         .curriculum-tag {
             display: inline-flex;
             align-items: center;
             gap: 4px;
-            background: #0c162d;
-            border: 1px solid rgba(197, 160, 89, 0.3);
-            color: #fceecb;
-            padding: 2px 6px;
+            background: #131C31;
+            color: #D4B572;
+            padding: 3px 8px;
             border-radius: 4px;
-            font-size: 9px;
+            font-size: 10px;
             font-weight: 700;
             text-transform: uppercase;
         }
+
         .media-tag {
             display: inline-flex;
             align-items: center;
             gap: 3px;
-            color: #8c6d2d;
-            background: #fdf8ee;
-            border: 1px solid rgba(197, 160, 89, 0.3);
-            padding: 2px 6px;
+            color: #947230;
+            background: #FDFBF7;
+            border: 1px solid rgba(184, 146, 75, 0.2);
+            padding: 3px 8px;
             border-radius: 4px;
-            font-size: 9px;
+            font-size: 10px;
             font-weight: 600;
         }
 
         .royal-crown-exact {
             display: inline-block;
-            background-color: #c5a059;
+            background-color: #B8924B;
             -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><g id="h"><path d="M50,14 C51,17 54,19 56,19 C55,21 53,23 52,26 C54,26 57,28 56,31 C54,30 52,28 51,26 L51,33 L50,33 Z"/><circle cx="50" cy="35" r="3"/><path d="M50,38 L54,38 L54,51 L50,51 Z"/><circle cx="50" cy="41" r="1" fill="white"/><circle cx="50" cy="45" r="1" fill="white"/><circle cx="50" cy="49" r="1" fill="white"/><path d="M52,38 C60,39 74,44 76,57 C78,63 76,68 73,70 C70,70 69,67 69,63 C69,50 58,41 52,40 Z"/><circle cx="56" cy="40" r="1.3"/><circle cx="61" cy="41" r="1.4"/><circle cx="66" cy="43" r="1.4"/><circle cx="71" cy="47" r="1.5"/><circle cx="75" cy="52" r="1.5"/><circle cx="76.5" cy="57" r="1.5"/><circle cx="76.5" cy="62" r="1.5"/><circle cx="74.5" cy="67" r="1.4"/><path d="M50,52 C52,55 55,58 57,59 C54,61 53,64 54,67 C55,66 57,64 57,61 C58,64 56,67 54,68 C56,69 58,69 60,68 C58,72 54,74 51,73 L51,75 L50,75 Z"/><path d="M68,54 C70,57 73,59 75,60 C73,61 72,64 73,66 C74,65 76,64 76,62 C77,65 75,68 73,69 C75,70 77,70 79,69 C77,72 74,74 71,73 L71,75 L69,75 C67,74 65,72 66,69 C67,70 69,69 70,68 C68,67 66,65 67,62 C68,64 70,65 71,66 C72,64 71,61 69,60 C71,59 73,57 73,54 Z"/><path d="M50,76 C65,76 76,73 78,71 C79,74 78,79 77,83 C66,85 55,86 50,86 Z"/><ellipse cx="50" cy="80.5" rx="3.5" ry="2.2" fill="white"/><ellipse cx="65" cy="80" rx="2.8" ry="1.8" fill="white"/><circle cx="58" cy="80.5" r="1" fill="white"/><circle cx="72" cy="79.5" r="0.9" fill="white"/><path d="M50,88 C64,88 75,85 77,83 C77,85 76,88 73,90 C66,93 56,94 50,94 Z"/><path d="M50,89 C64,89 74,86 76,84 C76,86 74,88 72,89 C65,92 56,93 50,93 Z" fill="white"/></g></defs><use href="%23h"/><use href="%23h" transform="translate(100,0) scale(-1,1)"/></svg>');
             -webkit-mask-size: contain;
             mask-size: contain;
@@ -122,33 +164,37 @@
         }
     </style>
 </head>
-<body class="antialiased selection:bg-royal-accent selection:text-royal-deep bg-royal-moon text-slate-800">
+<body class="antialiased selection:bg-royal-accent selection:text-white">
 
     <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-50 glass-nav border-b border-royal-accent/20 text-white transition-all duration-300">
+    <nav class="sticky top-0 z-50 glass-nav text-white transition-all duration-300 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <a href="#home" class="flex items-center space-x-3 group">
-                    <div class="w-12 h-12 rounded-full border border-royal-accent/60 flex items-center justify-center bg-royal-dark overflow-hidden shadow-xl transition-transform group-hover:scale-105 p-2">
+                    <div class="w-11 h-11 rounded-full border border-royal-accent flex items-center justify-center bg-royal-deep overflow-hidden shadow transition-transform group-hover:scale-105 p-2 royal-animated-icon royal-glow">
                         <div class="w-full h-full royal-crown-exact"></div>
                     </div>
                     <div>
-                        <span class="block font-serif tracking-wider text-lg font-bold text-white group-hover:text-royal-accent transition-colors">ROYAL ENGLISH</span>
-                        <span class="block text-[10px] uppercase tracking-widest text-royal-accent font-semibold">Mrs. Fatma Ramadan</span>
+                        <span class="block font-serif tracking-wide text-base font-bold text-white group-hover:text-royal-accent transition-colors">Royal English Academy</span>
+                        <span class="block text-[9px] uppercase tracking-widest text-royal-accent font-semibold flex items-center gap-1">
+                            <i class="fa-solid fa-crown text-[8px] text-royal-accent"></i> Mrs. Fatma Ramadan
+                        </span>
                     </div>
                 </a>
 
-                <div class="hidden lg:flex items-center space-x-8 text-sm font-medium tracking-wide">
-                    <a href="#recorded" class="hover:text-royal-accent transition-colors flex items-center gap-1.5"><i class="fa-solid fa-video text-xs text-royal-accent"></i> Recorded Sessions</a>
-                    <a href="#live-sessions" class="hover:text-royal-accent transition-colors flex items-center gap-1.5"><i class="fa-solid fa-chalkboard-user text-xs text-royal-accent"></i> Live Sessions</a>
-                    <a href="#evaluator" class="hover:text-royal-accent transition-colors flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass text-xs text-royal-accent"></i> Annotator</a>
-                    <a href="#essay-review" class="hover:text-royal-accent transition-colors flex items-center gap-1.5"><i class="fa-solid fa-pen-nib text-xs text-royal-accent"></i> Marking Desk</a>
-                    <a href="#student-portal" class="hover:text-royal-accent transition-colors flex items-center gap-1.5"><i class="fa-solid fa-user-lock text-xs text-royal-accent"></i> Student Portal</a>
+                <div class="hidden lg:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest text-slate-200">
+                    <a href="#recorded" class="hover:text-royal-accent transition-colors py-1 border-b-2 border-transparent hover:border-royal-accent">Recorded sessions</a>
+                    <a href="#resources" class="hover:text-royal-accent transition-colors py-1 border-b-2 border-transparent hover:border-royal-accent">Teaching resources</a>
+                    <a href="#live-classes" class="hover:text-royal-accent transition-colors py-1 border-b-2 border-transparent hover:border-royal-accent">Live classes</a>
                 </div>
 
-                <div class="hidden md:flex items-center">
-                    <a href="https://wa.me/201014786466" target="_blank" aria-label="WhatsApp Desk" class="w-10 h-10 rounded-full gold-gradient text-royal-deep flex items-center justify-center hover:scale-105 transition-all shadow-lg">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                <div class="flex items-center space-x-4">
+                    <a href="#cart" aria-label="Cart" class="text-slate-300 hover:text-royal-accent transition-colors relative">
+                        <i class="fa-solid fa-cart-shopping text-lg"></i>
+                        <span class="absolute -top-1.5 -right-2 bg-royal-accent text-royal-deep text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </a>
+                    <a href="#student-portal" class="px-4 py-2 rounded-xl bg-royal-accent/10 hover:bg-royal-accent/20 text-royal-accent font-bold text-xs uppercase tracking-wider border border-royal-accent/30 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-user"></i> Login
                     </a>
                 </div>
             </div>
@@ -156,83 +202,90 @@
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="relative bg-royal-moon text-slate-900 overflow-hidden py-12 lg:py-16 border-b border-royal-accent/25">
-        <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:28px_28px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                
-                <div class="lg:col-span-6 space-y-4 text-center lg:text-left">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white border border-royal-accent/30 text-royal-accent text-[11px] uppercase tracking-widest font-semibold shadow-sm">
-                        <div class="w-3 h-3 royal-crown-exact"></div>
-                        <span>Recorded Sessions • Comprehensive Video Access</span>
+    <header id="home" class="relative py-14 lg:py-18 border-b border-royal-accent/20 bg-royal-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
+            
+            <div class="space-y-3 max-w-3xl mx-auto text-center">
+                <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15] text-slate-800">
+                    Master English Language &amp; Literature With <span class="text-gold-gradient">Mrs. Fatma Ramadan</span>
+                </h1>
+                <p class="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto font-light leading-relaxed">
+                    Watch our dual preview videos below to explore methodology for Cambridge Checkpoint &amp; Edexcel IGCSE, complete with instant PDF material downloads.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch max-w-5xl mx-auto">
+
+                <!-- الفيديو الأول -->
+                <div class="gold-featured-box p-5 sm:p-6 relative text-white flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3 pb-2.5 border-b border-royal-accent/30">
+                            <span class="text-[11px] uppercase tracking-widest font-bold text-royal-accent">Preview 1: Checkpoint (0861)</span>
+                            <span class="text-[9px] font-bold text-royal-accent bg-royal-accent/10 px-2.5 py-0.5 rounded-full border border-royal-accent/30">Full HD</span>
+                        </div>
+
+                        <div class="relative bg-royal-deep rounded-xl p-5 border border-royal-accent/40 overflow-hidden shadow-inner text-center my-3">
+                            <div class="relative z-10 my-3 flex justify-center items-center">
+                                <button onclick="toggleVideoModal()" aria-label="Play Sample Video" class="w-16 h-16 rounded-2xl video-btn-royal flex items-center justify-center shadow-lg focus:outline-none">
+                                    <i class="fa-solid fa-play ml-1 text-xl"></i>
+                                </button>
+                            </div>
+                            <div class="relative z-10 pt-2 border-t border-royal-accent/30 text-left">
+                                <h4 class="text-xs font-bold text-white font-serif">Lower Secondary Checkpoint English</h4>
+                                <p class="text-[10px] text-royal-accent font-medium mt-0.5">By Mrs. Fatma Ramadan</p>
+                            </div>
+                        </div>
                     </div>
-                    <h1 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight leading-[1.15] text-slate-900">
-                        Master English Language &amp; Literature With <span class="text-gold-gradient">Mrs. Fatma Ramadan</span>
-                    </h1>
-                    <p class="text-sm sm:text-base text-slate-600 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
-                        Specialized video access for Cambridge Lower Secondary Checkpoint (0861), Primary Checkpoint (0058), Pearson Edexcel IGCSE, and American Diploma. Instant access to Full HD recorded sessions and downloadable PDF model answers.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-1">
-                        <a href="#recorded" class="w-full sm:w-auto px-6 py-3 rounded-xl gold-gradient text-royal-deep font-bold text-xs uppercase tracking-widest hover:scale-102 transition shadow-lg text-center flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-play"></i> Browse Recorded Sessions
-                        </a>
-                        <a href="https://wa.me/201014786466" target="_blank" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-white text-slate-800 font-semibold text-xs uppercase tracking-widest hover:bg-slate-50 border border-royal-accent/30 transition text-center inline-flex items-center justify-center space-x-2 shadow-sm group">
-                            <i class="fa-brands fa-whatsapp text-royal-accent text-base group-hover:scale-110 transition-transform"></i>
-                            <span>WhatsApp Admission Desk</span>
+
+                    <div class="mt-3 pt-3 border-t border-royal-accent/30 flex items-center justify-between gap-2">
+                        <span class="text-[11px] text-slate-300"><i class="fa-solid fa-file-pdf text-royal-accent"></i> Sample PDF Included</span>
+                        <a href="https://drive.google.com/uc?export=download&id=12Z5rxCWODTG8DKQw7CxfFu3uoinCsBtR" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-royal-accent/10 hover:bg-royal-accent/20 text-royal-accent font-bold text-[11px] uppercase tracking-wider border border-royal-accent/40 transition flex items-center gap-1.5 shadow-sm">
+                            <i class="fa-solid fa-download"></i> Download PDF
                         </a>
                     </div>
                 </div>
 
-                <!-- صندوق معاينة الفيديو باللون الكحلي الغامق Midnight -->
-                <div class="lg:col-span-6 flex justify-center w-full">
-                    <div class="w-full max-w-md bg-royal-dark rounded-2xl p-5 sm:p-6 shadow-xl border border-royal-accent/30 relative text-white">
-                        <div class="flex items-center justify-between mb-3 pb-2.5 border-b border-royal-accent/15">
-                            <div class="flex items-center space-x-2">
-                                <span class="w-2 h-2 rounded-full bg-royal-accent inline-block"></span>
-                                <span class="text-[11px] uppercase tracking-widest font-bold text-slate-200">Free Recorded Session Preview</span>
-                            </div>
-                            <span class="text-[9px] font-bold text-royal-accent bg-white/5 px-2 py-0.5 rounded-full border border-royal-accent/20">
-                                Protected Full HD
-                            </span>
+                <!-- الفيديو الثاني -->
+                <div class="gold-featured-box p-5 sm:p-6 relative text-white flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3 pb-2.5 border-b border-royal-accent/30">
+                            <span class="text-[11px] uppercase tracking-widest font-bold text-royal-accent">Preview 2: IGCSE Literature</span>
+                            <span class="text-[9px] font-bold text-royal-accent bg-royal-accent/10 px-2.5 py-0.5 rounded-full border border-royal-accent/30">Full HD</span>
                         </div>
 
-                        <div class="relative bg-gradient-to-br from-royal-dark via-royal-main to-royal-deep rounded-xl p-4 border border-royal-accent/20 overflow-hidden shadow-inner group text-center my-3">
-                            <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#dfbe7e_1px,transparent_1px)] [background-size:16px_16px]"></div>
-
+                        <div class="relative bg-royal-deep rounded-xl p-5 border border-royal-accent/40 overflow-hidden shadow-inner text-center my-3">
                             <div class="relative z-10 my-3 flex justify-center items-center">
-                                <button onclick="toggleVideoModal()" aria-label="Play Sample Video" class="w-12 h-12 rounded-xl gold-gradient text-royal-deep flex items-center justify-center shadow-lg transform group-hover:scale-105 transition duration-300 focus:outline-none">
-                                    <i class="fa-solid fa-play ml-0.5 text-sm"></i>
+                                <button onclick="toggleVideoModal()" aria-label="Play Sample Video" class="w-16 h-16 rounded-2xl video-btn-royal flex items-center justify-center shadow-lg focus:outline-none">
+                                    <i class="fa-solid fa-play ml-1 text-xl"></i>
                                 </button>
                             </div>
-
-                            <div class="relative z-10 flex items-end justify-between pt-3 border-t border-royal-accent/15 text-left">
-                                <div>
-                                    <h4 class="text-xs font-bold text-white font-serif">Lower Secondary Checkpoint (0861)</h4>
-                                    <p class="text-[10px] text-royal-accent font-medium mt-0.5">By Mrs. Fatma Ramadan</p>
-                                </div>
-                                <span class="px-2 py-0.5 rounded bg-black/40 text-royal-accent font-bold text-[9px] tracking-widest uppercase border border-royal-accent/20">
-                                    Full HD
-                                </span>
+                            <div class="relative z-10 pt-2 border-t border-royal-accent/30 text-left">
+                                <h4 class="text-xs font-bold text-white font-serif">Edexcel IGCSE Literature (4ET1)</h4>
+                                <p class="text-[10px] text-royal-accent font-medium mt-0.5">By Mrs. Fatma Ramadan</p>
                             </div>
                         </div>
+                    </div>
 
-                        <p class="text-[11px] text-slate-400 text-center mt-2 flex items-center justify-center gap-1">
-                            <i class="fa-solid fa-file-pdf text-royal-accent"></i> Stream recorded sessions directly with companion PDF analytical handouts.
-                        </p>
+                    <div class="mt-3 pt-3 border-t border-royal-accent/30 flex items-center justify-between gap-2">
+                        <span class="text-[11px] text-slate-300"><i class="fa-solid fa-file-pdf text-royal-accent"></i> Sample PDF Included</span>
+                        <a href="https://drive.google.com/uc?export=download&id=12Z5rxCWODTG8DKQw7CxfFu3uoinCsBtR" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-royal-accent/10 hover:bg-royal-accent/20 text-royal-accent font-bold text-[11px] uppercase tracking-wider border border-royal-accent/40 transition flex items-center gap-1.5 shadow-sm">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </a>
                     </div>
                 </div>
 
             </div>
+
         </div>
     </header>
 
     <!-- Modal منبثق لتشغيل الفيديو -->
-    <div id="videoModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-3 sm:p-6" onclick="closeOnBackdrop(event)">
-        <div class="bg-royal-dark border border-royal-accent/40 rounded-3xl max-w-4xl w-full overflow-hidden relative text-white shadow-2xl">
-            <div class="flex justify-between items-center px-6 py-4 border-b border-royal-accent/20 bg-royal-deep">
+    <div id="videoModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-3 sm:p-6" onclick="closeOnBackdrop(event)">
+        <div class="bg-royal-deep border border-royal-accent/40 rounded-2xl max-w-4xl w-full overflow-hidden relative text-white shadow-2xl">
+            <div class="flex justify-between items-center px-6 py-4 border-b border-royal-accent/20">
                 <div>
                     <h3 class="font-serif text-lg font-bold text-royal-accent">Recorded Session Sample Preview</h3>
-                    <p class="text-[11px] text-slate-400">Lower Secondary Checkpoint (0861) • By Mrs. Fatma Ramadan</p>
+                    <p class="text-[11px] text-slate-300">By Mrs. Fatma Ramadan</p>
                 </div>
                 <button onclick="toggleVideoModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-lg transition">
                     <i class="fa-solid fa-xmark"></i>
@@ -244,124 +297,124 @@
         </div>
     </div>
 
-    <!-- قسم الحصص المسجلة -->
-    <section id="recorded" class="py-16 bg-royal-moon border-b border-royal-accent/20">
+    <!-- قسم Recorded sessions -->
+    <section id="recorded" class="py-16 bg-[#FAF8F5] border-b border-royal-accent/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
-                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-royal-accent/40 text-royal-accent text-[11px] font-bold shadow-sm">
-                    <div class="w-3 h-3 royal-crown-exact"></div>
-                    <span class="tracking-wide">HIGH-YIELD RECORDED SESSIONS • VIDEOS + MODEL ANSWERS</span>
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-royal-accent/40 text-royal-accent text-[11px] font-bold shadow-sm royal-glow">
+                    <div class="w-3 h-3 royal-crown-exact royal-animated-icon"></div>
+                    <span class="tracking-wide">RECORDED SESSIONS • COURSES &amp; MODEL ANSWERS</span>
                 </div>
-                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-slate-900">
-                    On-Demand Recorded Sessions &amp; Model Answers
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-slate-800">
+                    On-Demand Recorded Courses &amp; Model Answers
                 </h2>
                 <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                    Watch recorded sessions on-demand, download examiner-approved model answers, and secure instant access with automatic online payment.
+                    Watch our comprehensive recorded courses on-demand, download examiner-approved model answers, and secure instant access.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
 
-                <!-- الكارت 1: Primary Checkpoint -->
-                <div class="bg-white rounded-xl p-4 moon-card-border relative flex flex-col justify-between group">
+                <!-- الكارت 1 -->
+                <div class="royal-card p-5 relative flex flex-col justify-between group">
                     <div>
                         <div class="card-header-flow">
-                            <span class="curriculum-tag"><i class="fa-solid fa-graduation-cap text-royal-accent mr-1"></i> Primary Checkpoint</span>
+                            <span class="curriculum-tag">Primary Checkpoint</span>
                             <span class="media-tag"><i class="fa-solid fa-video text-xs"></i> Video • PDFs</span>
                         </div>
-                        <h3 class="font-serif font-bold text-base text-slate-900 leading-snug mt-1 group-hover:text-royal-accent transition-colors">
+                        <h3 class="font-serif font-bold text-base text-slate-800 leading-snug mt-1 group-hover:text-royal-accent transition-colors">
                             Primary Checkpoint English (0058)
                         </h3>
                         <p class="text-[11px] text-royal-accent font-bold uppercase tracking-wider mt-0.5">Foundational Mastery</p>
                         <p class="text-[11px] text-slate-600 leading-relaxed my-2.5">
                             Early reading comprehension, spelling rules, creative writing foundations, and practice papers deconstruction.
                         </p>
-                        <div class="p-2.5 bg-royal-moon rounded-lg border border-royal-accent/20 my-2">
+                        <div class="p-2.5 bg-[#FAF8F5] rounded-lg border border-royal-accent/20 my-2">
                             <span class="text-[9px] font-bold text-royal-accent uppercase tracking-wider block">Investment Fee</span>
-                            <span class="font-serif font-extrabold text-lg text-slate-900">1,500 LE</span>
+                            <span class="font-serif font-extrabold text-lg text-slate-800">1,500 LE</span>
                         </div>
                     </div>
-                    <div class="pt-2 border-t border-royal-accent/20 space-y-1.5">
-                        <a href="https://wa.me/201014786466?text=I%20want%20to%20enroll%20in%20Primary%20Checkpoint" target="_blank" class="w-full py-2 rounded-lg gold-gradient text-royal-deep font-bold text-[10px] uppercase tracking-widest text-center hover:opacity-90 transition shadow block flex items-center justify-center gap-1.5">
+                    <div class="pt-3 border-t border-slate-100">
+                        <a href="https://wa.me/201014786466?text=I%20want%20to%20enroll%20in%20Primary%20Checkpoint" target="_blank" class="w-full py-2.5 rounded-lg gold-gradient text-royal-deep font-bold text-[10px] uppercase tracking-widest text-center hover:opacity-90 transition shadow block flex items-center justify-center gap-1.5">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Enroll Now (1,500 LE)
                         </a>
                     </div>
                 </div>
 
-                <!-- الكارت 2: Lower Secondary Checkpoint -->
-                <div class="bg-white rounded-xl p-4 moon-card-border relative flex flex-col justify-between group">
+                <!-- الكارت 2 -->
+                <div class="royal-card p-5 relative flex flex-col justify-between group">
                     <div>
                         <div class="card-header-flow">
-                            <span class="curriculum-tag"><i class="fa-solid fa-graduation-cap text-royal-accent mr-1"></i> Lower Secondary</span>
+                            <span class="curriculum-tag">Lower Secondary</span>
                             <span class="media-tag"><i class="fa-solid fa-video text-xs"></i> Video • PDFs</span>
                         </div>
-                        <h3 class="font-serif font-bold text-base text-slate-900 leading-snug mt-1 group-hover:text-royal-accent transition-colors">
+                        <h3 class="font-serif font-bold text-base text-slate-800 leading-snug mt-1 group-hover:text-royal-accent transition-colors">
                             Lower Secondary Checkpoint (0861)
                         </h3>
                         <p class="text-[11px] text-royal-accent font-bold uppercase tracking-wider mt-0.5">Checkpoint Core</p>
                         <p class="text-[11px] text-slate-600 leading-relaxed my-2.5">
                             Step-by-step deconstruction of Paper 1 (Non-Fiction) &amp; Paper 2 (Fiction), explicit deduction methods.
                         </p>
-                        <div class="p-2.5 bg-royal-moon rounded-lg border border-royal-accent/20 my-2">
+                        <div class="p-2.5 bg-[#FAF8F5] rounded-lg border border-royal-accent/20 my-2">
                             <span class="text-[9px] font-bold text-royal-accent uppercase tracking-wider block">Investment Fee</span>
-                            <span class="font-serif font-extrabold text-lg text-slate-900">2,000 LE</span>
+                            <span class="font-serif font-extrabold text-lg text-slate-800">2,000 LE</span>
                         </div>
                     </div>
-                    <div class="pt-2 border-t border-royal-accent/20 space-y-1.5">
-                        <a href="https://wa.me/201014786466?text=I%20want%20to%20enroll%20in%20Lower%20Secondary%200861" target="_blank" class="w-full py-2 rounded-lg gold-gradient text-royal-deep font-bold text-[10px] uppercase tracking-widest text-center hover:opacity-90 transition shadow block flex items-center justify-center gap-1.5">
+                    <div class="pt-3 border-t border-slate-100">
+                        <a href="https://wa.me/201014786466?text=I%20want%20to%20enroll%20in%20Lower%20Secondary%200861" target="_blank" class="w-full py-2.5 rounded-lg gold-gradient text-royal-deep font-bold text-[10px] uppercase tracking-widest text-center hover:opacity-90 transition shadow block flex items-center justify-center gap-1.5">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Enroll Now (2,000 LE)
                         </a>
                     </div>
                 </div>
 
-                <!-- الكارت 3: Edexcel IGCSE Language A -->
-                <div class="bg-white rounded-xl p-4 moon-card-border relative flex flex-col justify-between group">
+                <!-- الكارت 3 -->
+                <div class="royal-card p-5 relative flex flex-col justify-between group">
                     <div>
                         <div class="card-header-flow">
-                            <span class="curriculum-tag"><i class="fa-solid fa-book-open text-royal-accent mr-1"></i> Edexcel IGCSE 4EA1</span>
+                            <span class="curriculum-tag">Edexcel IGCSE 4EA1</span>
                             <span class="media-tag"><i class="fa-solid fa-video text-xs"></i> Video • PDFs</span>
                         </div>
-                        <h3 class="font-serif font-bold text-base text-slate-900 leading-snug mt-1 group-hover:text-royal-accent transition-colors">
+                        <h3 class="font-serif font-bold text-base text-slate-800 leading-snug mt-1 group-hover:text-royal-accent transition-colors">
                             Language A (4EA1) Recorded Sessions
                         </h3>
                         <p class="text-[11px] text-royal-accent uppercase tracking-wider mt-0.5">Non-Fiction &amp; Writing</p>
                         <p class="text-[11px] text-slate-600 leading-relaxed my-2.5">
                             Paper 1 Non-Fiction Anthology annotations, Question 4 &amp; 5 structural blueprints, transactional writing.
                         </p>
-                        <div class="p-2.5 bg-royal-moon rounded-lg border border-royal-accent/20 my-2">
+                        <div class="p-2.5 bg-[#FAF8F5] rounded-lg border border-royal-accent/20 my-2">
                             <span class="text-[9px] font-bold text-royal-accent uppercase tracking-wider block">Investment Fee</span>
-                            <span class="font-serif font-extrabold text-lg text-slate-900">4,000 EGP <span class="text-[9px] font-normal text-slate-500">/Term</span></span>
+                            <span class="font-serif font-extrabold text-lg text-slate-800">4,000 EGP <span class="text-[9px] font-normal text-slate-500">/Term</span></span>
                         </div>
                     </div>
-                    <div class="pt-2 border-t border-royal-accent/20 space-y-1.5">
-                        <a href="https://wa.me/201014786466?text=I%20want%20to%20enroll%20in%20Language%20A%204EA1" target="_blank" class="w-full py-2 rounded-lg gold-gradient text-royal-deep font-bold text-[10px] uppercase tracking-widest text-center hover:opacity-90 transition shadow block flex items-center justify-center gap-1.5">
+                    <div class="pt-3 border-t border-slate-100">
+                        <a href="https://wa.me/201014786466?text=I%20want%20to%20enroll%20in%20Language%20A%204EA1" target="_blank" class="w-full py-2.5 rounded-lg gold-gradient text-royal-deep font-bold text-[10px] uppercase tracking-widest text-center hover:opacity-90 transition shadow block flex items-center justify-center gap-1.5">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Enroll Now (4,000 EGP)
                         </a>
                     </div>
                 </div>
 
-                <!-- الكارت 4: Edexcel IGCSE Literature 4ET1 -->
-                <div class="bg-white rounded-xl p-4 moon-card-border relative flex flex-col justify-between group">
+                <!-- الكارت 4 -->
+                <div class="royal-card p-5 relative flex flex-col justify-between group">
                     <div>
                         <div class="card-header-flow">
-                            <span class="curriculum-tag"><i class="fa-solid fa-book-open text-royal-accent mr-1"></i> Edexcel IGCSE 4ET1</span>
+                            <span class="curriculum-tag">Edexcel IGCSE 4ET1</span>
                             <span class="media-tag"><i class="fa-solid fa-video text-xs"></i> Video • PDFs</span>
                         </div>
-                        <h3 class="font-serif font-bold text-base text-slate-900 leading-snug mt-1 group-hover:text-royal-accent transition-colors">
+                        <h3 class="font-serif font-bold text-base text-slate-800 leading-snug mt-1 group-hover:text-royal-accent transition-colors">
                             English Literature (4ET1) Sessions
                         </h3>
                         <p class="text-[11px] text-royal-accent uppercase tracking-wider mt-0.5">Prose &amp; Poetry Mastery</p>
                         <p class="text-[11px] text-slate-600 leading-relaxed my-2.5">
                             Deep-dive analysis of *Of Mice and Men*, poetry anthology comparison, unseen verse deconstruction, and Level 5 mark schemes.
                         </p>
-                        <div class="p-2.5 bg-royal-moon rounded-lg border border-royal-accent/20 my-2">
+                        <div class="p-2.5 bg-[#FAF8F5] rounded-lg border border-royal-accent/20 my-2">
                             <span class="text-[9px] font-bold text-royal-accent uppercase tracking-wider block">Investment Fee</span>
-                            <span class="font-serif font-extrabold text-lg text-slate-900">4,000 EGP <span class="text-[9px] font-normal text-slate-500">/Term</span></span>
+                            <span class="font-serif font-extrabold text-lg text-slate-800">4,000 EGP <span class="text-[9px] font-normal text-slate-500">/Term</span></span>
                         </div>
                     </div>
-                    <div class="pt-2 border-t border-royal-accent/20 space-y-1.5">
-                        <a href="https://wa.me/201014786466?text=I%20want%20to%20enroll%20in%20IGCSE%20Literature%204ET1" target="_blank" class="w-full py-2 rounded-lg gold-gradient text-royal-deep font-bold text-[10px] uppercase tracking-widest text-center hover:opacity-90 transition shadow block flex items-center justify-center gap-1.5">
+                    <div class="pt-3 border-t border-slate-100">
+                        <a href="https://wa.me/201014786466?text=I%20want%20to%20enroll%20in%20IGCSE%20Literature%204ET1" target="_blank" class="w-full py-2.5 rounded-lg gold-gradient text-royal-deep font-bold text-[10px] uppercase tracking-widest text-center hover:opacity-90 transition shadow block flex items-center justify-center gap-1.5">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Enroll Now (4,000 EGP)
                         </a>
                     </div>
@@ -371,242 +424,106 @@
         </div>
     </section>
 
-    <!-- Live Sessions Section -->
-    <section id="live-sessions" class="py-16 bg-royal-moon border-b border-royal-accent/20">
+    <!-- قسم Teaching resources -->
+    <section id="resources" class="py-16 bg-white border-b border-royal-accent/20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
-                <span class="text-royal-accent uppercase tracking-widest text-[11px] font-bold flex items-center justify-center gap-1.5">Live Interactive Masterclasses</span>
-                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-slate-900">Live Sessions &amp; Diagnostic Masterclasses</h2>
-                <div class="w-20 h-1 bg-royal-accent mx-auto rounded"></div>
-                <p class="text-slate-600 text-xs leading-relaxed">
-                    Join small weekly live interactive sessions with Mrs. Fatma Ramadan for real-time textual deconstruction and essay feedback.
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF8F5] border border-royal-accent/40 text-royal-accent text-[11px] font-bold shadow-sm royal-glow">
+                    <div class="w-3 h-3 royal-crown-exact royal-animated-icon"></div>
+                    <span class="tracking-wide">TEACHING RESOURCES • EDUCATOR TOOLS</span>
+                </div>
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-slate-800">Professional Teaching Resources</h2>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Examiner-approved handouts, quotation banks, and structured annotation templates ready for students and fellow educators.
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-2xl moon-card-border shadow-sm space-y-3 flex flex-col justify-between group">
-                    <div class="space-y-2">
-                        <div class="flex justify-between items-center text-[11px] font-bold uppercase text-royal-accent">
-                            <span class="flex items-center gap-1"><i class="fa-solid fa-award"></i> Edexcel IGCSE</span>
-                            <span class="text-slate-500">Syllabus 4ET1</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 group-hover:text-royal-accent transition-colors">English Literature Live Sessions</h3>
-                        <p class="text-[11px] text-slate-600 leading-relaxed">
-                            Poetry Anthology comparison, unseen verse deconstruction, John Steinbeck's Of Mice and Men, and Level 5 mark scheme modeling.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/201014786466?text=Book%20Literature%20Live%20Sessions" target="_blank" class="block text-center py-2 rounded gold-gradient text-royal-deep font-bold text-[11px] uppercase tracking-wider shadow hover:opacity-90 transition">
-                        <i class="fa-brands fa-whatsapp mr-1"></i> Book Live Masterclass Sessions
+                <div class="royal-card p-6 space-y-3">
+                    <div class="text-royal-accent text-2xl mb-1"><i class="fa-solid fa-file-lines"></i></div>
+                    <h3 class="font-serif font-bold text-base text-slate-800">Of Mice and Men Quote Bank</h3>
+                    <p class="text-xs text-slate-600">Categorized key quotations with thematic and structural breakdowns for Level 5 essays.</p>
+                    <a href="https://drive.google.com/uc?export=download&id=12Z5rxCWODTG8DKQw7CxfFu3uoinCsBtR" target="_blank" class="text-xs font-bold text-royal-accent hover:underline inline-flex items-center gap-1">
+                        <i class="fa-solid fa-download"></i> Download Resource (.PDF)
                     </a>
                 </div>
-
-                <div class="bg-white p-6 rounded-2xl moon-card-border shadow-sm space-y-3 flex flex-col justify-between group">
-                    <div class="space-y-2">
-                        <div class="flex justify-between items-center text-[11px] font-bold uppercase text-royal-accent">
-                            <span class="flex items-center gap-1"><i class="fa-solid fa-award"></i> Edexcel IGCSE</span>
-                            <span class="text-slate-500">Syllabus 4EA1</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 group-hover:text-royal-accent transition-colors">English Language A Live Sessions</h3>
-                        <p class="text-[11px] text-slate-600 leading-relaxed">
-                            Non-fiction textual evaluation, comparative essays, transactional writing frameworks, and timed exam pacing.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/201014786466?text=Book%20Language%20A%20Live%20Sessions" target="_blank" class="block text-center py-2 rounded gold-gradient text-royal-deep font-bold text-[11px] uppercase tracking-wider shadow hover:opacity-90 transition">
-                        <i class="fa-brands fa-whatsapp mr-1"></i> Book Live Masterclass Sessions
+                <div class="royal-card p-6 space-y-3">
+                    <div class="text-royal-accent text-2xl mb-1"><i class="fa-solid fa-file-pen"></i></div>
+                    <h3 class="font-serif font-bold text-base text-slate-800">IGCSE Non-Fiction PEEEL Guide</h3>
+                    <p class="text-xs text-slate-600">Comprehensive structuring guide for Paper 1 reading response questions.</p>
+                    <a href="https://drive.google.com/uc?export=download&id=12Z5rxCWODTG8DKQw7CxfFu3uoinCsBtR" target="_blank" class="text-xs font-bold text-royal-accent hover:underline inline-flex items-center gap-1">
+                        <i class="fa-solid fa-download"></i> Download Resource (.PDF)
                     </a>
                 </div>
-
-                <div class="bg-white p-6 rounded-2xl moon-card-border shadow-sm space-y-3 flex flex-col justify-between group">
-                    <div class="space-y-2">
-                        <div class="flex justify-between items-center text-[11px] font-bold uppercase text-royal-accent">
-                            <span class="flex items-center gap-1"><i class="fa-solid fa-user-check"></i> Diagnostic 1-on-1</span>
-                            <span class="text-slate-500">Direct Placement</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 group-hover:text-royal-accent transition-colors">Diagnostic Placement Session</h3>
-                        <p class="text-[11px] text-slate-600 leading-relaxed">
-                            Book a private placement diagnostic with Mrs. Fatma Ramadan to pinpoint skill gaps and recommend the best live or recorded cohort.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/201014786466?text=Schedule%20Diagnostic%20Session" target="_blank" class="block text-center py-2 rounded gold-gradient text-royal-deep font-bold text-[11px] uppercase tracking-wider shadow hover:opacity-90 transition">
-                        <i class="fa-brands fa-whatsapp mr-1"></i> Schedule Diagnostic Session
+                <div class="royal-card p-6 space-y-3">
+                    <div class="text-royal-accent text-2xl mb-1"><i class="fa-solid fa-book-open-reader"></i></div>
+                    <h3 class="font-serif font-bold text-base text-slate-800">Checkpoint 0861 Revision Sheets</h3>
+                    <p class="text-xs text-slate-600">Practice grammar, vocabulary extension, and summary writing templates.</p>
+                    <a href="https://drive.google.com/uc?export=download&id=12Z5rxCWODTG8DKQw7CxfFu3uoinCsBtR" target="_blank" class="text-xs font-bold text-royal-accent hover:underline inline-flex items-center gap-1">
+                        <i class="fa-solid fa-download"></i> Download Resource (.PDF)
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Examiner Annotator Engine -->
-    <section id="evaluator" class="py-16 bg-royal-moon border-b border-royal-accent/20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
-                <span class="text-royal-accent uppercase tracking-widest text-[11px] font-bold flex items-center justify-center gap-1">Grade 9 Study Buddy • Examiner Interactive Engine</span>
-                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-slate-900">Interactive Grade 9 Examiner Annotator</h2>
-                <div class="w-20 h-1 bg-royal-accent mx-auto rounded"></div>
-                <p class="text-slate-600 text-xs leading-relaxed">
-                    Click on any highlighted phrase below to reveal Mrs. Fatma Ramadan's direct marking commentary and Level 5 criteria breakdown for Of Mice and Men.
-                </p>
-            </div>
-
-            <div class="bg-white border-2 border-royal-accent/30 rounded-2xl p-6 lg:p-8 shadow-xl max-w-5xl mx-auto">
-                <div class="flex flex-wrap items-center gap-3 mb-6">
-                    <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-royal-accent/30 text-slate-800 text-[11px] font-bold uppercase flex items-center gap-1.5">
-                        <i class="fa-solid fa-book text-royal-accent"></i> Syllabus: Edexcel 4ET1 • Of Mice and Men
-                    </span>
-                    <button onclick="showAnnotatorTab('all')" id="btn-all" class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-800 text-[11px] font-bold uppercase hover:bg-slate-200 transition">Show All Elements</button>
-                    <button onclick="showAnnotatorTab('zoom')" id="btn-zoom" class="px-3 py-1.5 rounded-full bg-royal-accent text-royal-deep text-[11px] font-bold uppercase transition">🔍 Zoomorphic Imagery</button>
-                    <button onclick="showAnnotatorTab('circle')" id="btn-circle" class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-800 text-[11px] font-bold uppercase hover:bg-slate-200 transition">📐 Circular Structure</button>
+    <!-- قسم Live classes -->
+    <section id="live-classes" class="py-16 bg-[#FAF8F5] border-b border-royal-accent/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-royal-accent/40 text-royal-accent text-[11px] font-bold shadow-sm royal-glow">
+                    <div class="w-3 h-3 royal-crown-exact royal-animated-icon"></div>
+                    <span class="tracking-wide">LIVE CLASSES • INTERACTIVE COHORTS</span>
                 </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                    <div class="lg:col-span-7 bg-royal-moon p-6 rounded-xl border border-royal-accent/30 space-y-4 text-slate-700 leading-relaxed font-serif text-base">
-                        <p id="para-zoom" class="transition-all">
-                            In dramatizing the predatory vulnerability of migrant labor, Steinbeck depicts Lennie's physical presence through <span onclick="highlightComment('zoom')" class="bg-amber-100 text-amber-900 cursor-pointer px-1.5 py-0.5 rounded border border-royal-accent underline font-sans text-sm font-semibold hover:bg-amber-200 transition">"bear-like animalistic kinetic verbs"</span>, instantly establishing an instinctual innocence unsuited to a harsh, Darwinian economic system.
-                        </p>
-                        <p id="para-circle" class="hidden transition-all font-sans text-sm text-slate-700">
-                            By beginning and concluding the novella by the verdant pool of the Salinas River: <span onclick="highlightComment('circle')" class="bg-amber-100 text-amber-900 cursor-pointer px-1.5 py-0.5 rounded border border-royal-accent underline font-semibold hover:bg-amber-200 transition">"live off the fatta the lan'."</span> Steinbeck constructs an inescapable circular narrative frame, underscoring that for dispossessed workers during the Great Depression, the pastoral dream was fated to end in tragedy.
-                        </p>
-                    </div>
-
-                    <div class="lg:col-span-5 bg-royal-moon p-5 rounded-xl border border-royal-accent/30 text-slate-900 space-y-3 shadow-sm">
-                        <div class="flex items-center space-x-2.5 border-b border-royal-accent/20 pb-2.5">
-                            <div class="w-8 h-8 rounded-full gold-gradient text-royal-deep flex items-center justify-center font-bold p-1">
-                                <div class="w-full h-full royal-crown-exact"></div>
-                            </div>
-                            <div>
-                                <h4 class="font-serif text-slate-900 font-bold text-sm">Examiner Marking Note</h4>
-                                <span class="text-[10px] text-royal-accent font-semibold">Click highlighted text to inspect criteria</span>
-                            </div>
-                        </div>
-                        <div id="comment-box" class="space-y-2 text-xs text-slate-600">
-                            <p class="font-medium text-slate-900">Grade 9 responses seamlessly connect zoomorphic characterization with Steinbeck's macro-critique of the American Dream. Avoid isolated quotes without thematic justification.</p>
-                            <div class="p-2.5 rounded-lg bg-white border border-royal-accent/30 text-[11px] text-royal-accent">
-                                <p class="font-bold mb-0.5 flex items-center gap-1"><i class="fa-solid fa-check-circle"></i> Criterion: Language &amp; Structure (Level 5)</p>
-                                <p>Demonstrates sophisticated selection of textual detail with perceptive critical evaluation.</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-3 p-3 rounded-xl bg-white border border-royal-accent/30 flex items-center justify-between">
-                            <div class="flex items-center space-x-2.5">
-                                <button onclick="toggleAudioTip()" id="audioBtn" class="w-8 h-8 rounded-full gold-gradient text-royal-deep flex items-center justify-center shadow hover:scale-105 transition-transform">
-                                    <i id="audioIcon" class="fa-solid fa-play text-xs"></i>
-                                </button>
-                                <div>
-                                    <div class="text-[11px] font-bold text-slate-900">Mrs. Fatma's Examiner Tip</div>
-                                    <div class="text-[10px] text-royal-accent">Click to listen to examiner breakdown</div>
-                                </div>
-                            </div>
-                            <span class="text-[10px] font-bold text-slate-500">0:30</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Line-by-Line Essay Marking Portal -->
-    <section id="essay-review" class="py-16 bg-royal-moon border-b border-royal-accent/20">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10 space-y-3">
-                <span class="text-royal-accent uppercase tracking-widest text-[11px] font-bold flex items-center justify-center gap-1">Diagnostic Examiner Feedback</span>
-                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-slate-900">Line-by-Line Essay Marking Portal</h2>
-                <div class="w-20 h-1 bg-royal-accent mx-auto rounded"></div>
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-slate-800">Live Weekly Interactive Classes</h2>
                 <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                    Submit your practice essay response below to receive line-by-line annotations and Level 5 mark band scoring directly from Mrs. Fatma Ramadan.
+                    Join direct online classes with Mrs. Fatma Ramadan for real-time engagement, textual debate, and live essay reviews.
                 </p>
-                <div class="inline-flex items-center space-x-2 text-[11px] font-semibold text-royal-accent bg-white px-3 py-1 rounded-full border border-royal-accent/30 shadow-sm">
-                    <i class="fa-solid fa-inbox text-royal-accent"></i>
-                    <span>Submissions go straight into Mrs. Fatma's review desk • Direct Review Desk</span>
-                </div>
             </div>
-
-            <div class="bg-white rounded-2xl p-6 sm:p-8 border-2 border-royal-accent/30 royal-card-shadow text-slate-900">
-                <form id="essay-form" onsubmit="submitEssay(event)" class="space-y-4">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-[11px] uppercase tracking-wider text-royal-accent font-bold mb-1.5">Student Full Name</label>
-                            <input type="text" id="essay-name" required class="w-full px-3.5 py-2.5 rounded-xl bg-royal-moon border border-royal-accent/30 text-slate-900 focus:outline-none focus:border-royal-accent text-xs" placeholder="Enter full name">
-                        </div>
-                        <div>
-                            <label class="block text-[11px] uppercase tracking-wider text-royal-accent font-bold mb-1.5">WhatsApp Contact</label>
-                            <input type="tel" id="essay-phone" required class="w-full px-3.5 py-2.5 rounded-xl bg-royal-moon border border-royal-accent/30 text-slate-900 focus:outline-none focus:border-royal-accent text-xs" placeholder="+20 ...">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-royal-accent font-bold mb-1.5">Course &amp; Syllabus</label>
-                        <select id="essay-course" class="w-full px-3.5 py-2.5 rounded-xl bg-royal-moon border border-royal-accent/30 text-slate-900 focus:outline-none focus:border-royal-accent text-xs">
-                            <option>Cambridge Primary Checkpoint English Recorded Sessions - 1,500 LE</option>
-                            <option>Lower Secondary Checkpoint (0861) Recorded Sessions - 2,000 LE</option>
-                            <option>Edexcel IGCSE Literature (4ET1) Recorded Sessions</option>
-                            <option>Edexcel IGCSE Language A (4EA1) Recorded Sessions</option>
-                            <option>American Diploma / EST English Recorded Sessions</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-royal-accent font-bold mb-1.5">Essay Title or Prompt</label>
-                        <input type="text" id="essay-title" required class="w-full px-3.5 py-2.5 rounded-xl bg-royal-moon border border-royal-accent/30 text-slate-900 focus:outline-none focus:border-royal-accent text-xs" placeholder="e.g. Discuss how Steinbeck presents loneliness...">
-                    </div>
-
-                    <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-royal-accent font-bold mb-1.5">Paste Your Essay Text</label>
-                        <textarea id="essay-content" rows="4" required class="w-full px-3.5 py-2.5 rounded-xl bg-royal-moon border border-royal-accent/30 text-slate-900 focus:outline-none focus:border-royal-accent text-xs" placeholder="Paste your practice essay here for examiner marking..."></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full py-3 rounded-xl gold-gradient text-royal-deep font-bold text-xs uppercase tracking-widest hover:opacity-95 transition shadow-lg flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-paper-plane"></i> Submit Response for Examiner Evaluation
-                    </button>
-                </form>
-
-                <div id="essay-success" class="hidden mt-4 p-5 bg-emerald-50 border border-emerald-500 rounded-xl text-emerald-900 text-center space-y-2">
-                    <i class="fa-solid fa-circle-check text-2xl text-emerald-600"></i>
-                    <p class="font-bold text-base">Essay Submitted Successfully!</p>
-                    <p class="text-xs text-emerald-700">Submissions go straight into Mrs. Fatma's review desk. You will receive direct annotations via WhatsApp.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="royal-card p-6 space-y-4">
+                    <span class="curriculum-tag">IGCSE Cohort</span>
+                    <h3 class="font-serif font-bold text-lg text-slate-800">Edexcel IGCSE Literature Live</h3>
+                    <p class="text-xs text-slate-600">Weekly live sessions covering prose, poetry analysis, and exam timing.</p>
+                    <a href="https://wa.me/201014786466?text=Book%20Live%20IGCSE%20Literature" target="_blank" class="block text-center py-2.5 rounded-lg gold-gradient text-royal-deep font-bold text-xs uppercase tracking-wider shadow">
+                        Book Live Class
+                    </a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Student Portal Section -->
-    <section id="student-portal" class="py-16 bg-royal-moon border-t border-royal-accent/20">
-        <div class="max-w-md mx-auto px-4 text-center space-y-4">
-            <div class="w-12 h-12 rounded-full gold-gradient text-royal-deep flex items-center justify-center shadow-lg p-2 mx-auto">
-                <div class="w-full h-full royal-crown-exact"></div>
-            </div>
-            <h2 class="font-serif text-2xl font-bold text-slate-900">Student Portal Access</h2>
-            <p class="text-slate-600 text-xs">Log in with your registered student credentials to access purchased recorded sessions, view feedback, and download course PDFs.</p>
-            <div class="bg-white p-6 rounded-2xl border-2 border-royal-accent/30 shadow-xl space-y-3 text-left text-slate-900">
-                <div>
-                    <label class="block text-[11px] uppercase tracking-wider text-royal-accent font-semibold mb-1">Student ID or Email</label>
-                    <input type="text" class="w-full px-3.5 py-2.5 rounded-xl bg-royal-moon border border-royal-accent/30 text-slate-900 text-xs focus:outline-none focus:border-royal-accent" placeholder="Enter ID or email">
+                <div class="royal-card p-6 space-y-4">
+                    <span class="curriculum-tag">Checkpoint Core</span>
+                    <h3 class="font-serif font-bold text-lg text-slate-800">Lower Secondary Checkpoint Live</h3>
+                    <p class="text-xs text-slate-600">Interactive practice on reading comprehension and creative writing.</p>
+                    <a href="https://wa.me/201014786466?text=Book%20Live%20Checkpoint" target="_blank" class="block text-center py-2.5 rounded-lg gold-gradient text-royal-deep font-bold text-xs uppercase tracking-wider shadow">
+                        Book Live Class
+                    </a>
                 </div>
-                <div>
-                    <label class="block text-[11px] uppercase tracking-wider text-royal-accent font-semibold mb-1">Password</label>
-                    <input type="password" class="w-full px-3.5 py-2.5 rounded-xl bg-royal-moon border border-royal-accent/30 text-slate-900 text-xs focus:outline-none focus:border-royal-accent" placeholder="••••••••">
+                <div class="royal-card p-6 space-y-4">
+                    <span class="curriculum-tag">1-on-1 Diagnostic</span>
+                    <h3 class="font-serif font-bold text-lg text-slate-800">Private Diagnostic Session</h3>
+                    <p class="text-xs text-slate-600">Personalized assessment and targeted learning plan with Mrs. Fatma.</p>
+                    <a href="https://wa.me/201014786466?text=Schedule%20Diagnostic" target="_blank" class="block text-center py-2.5 rounded-lg gold-gradient text-royal-deep font-bold text-xs uppercase tracking-wider shadow">
+                        Schedule Session
+                    </a>
                 </div>
-                <button onclick="alert('Student Portal Login Authenticated Successfully!')" class="w-full py-3 rounded-xl gold-gradient text-royal-deep font-bold text-[11px] uppercase tracking-widest hover:opacity-95 transition flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-lock-open text-xs"></i> Sign In to Portal
-                </button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-royal-deep text-slate-300 py-16 border-t border-royal-accent/30 text-sm">
+    <footer class="bg-royal-deep text-slate-300 py-16 border-t border-royal-accent/20 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12 items-start">
                 
-                <!-- العمود الأول: اسم الأكاديمية والوصف -->
                 <div class="space-y-4 md:col-span-5">
                     <div class="flex items-center space-x-3.5">
-                        <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-royal-deep font-bold text-lg p-2 shadow-md shrink-0">
+                        <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-royal-deep font-bold text-lg p-2 shadow shrink-0 royal-animated-icon">
                             <div class="w-full h-full royal-crown-exact"></div>
                         </div>
                         <div>
-                            <span class="block font-serif text-white font-bold text-lg tracking-wider">ROYAL ENGLISH ACADEMY</span>
-                            <span class="block text-xs uppercase tracking-widest text-royal-accent font-semibold">BY: MRS. FATMA RAMADAN</span>
+                            <span class="block font-serif text-white font-bold text-lg tracking-wider">Royal English Academy</span>
+                            <span class="block text-[10px] uppercase tracking-widest text-royal-accent font-semibold">Mrs. Fatma Ramadan</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-300 max-w-sm leading-relaxed">
+                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
                         Live cohorts booking &amp; Recorded Sessions instant access.
                     </p>
                     <div class="pt-2">
@@ -617,10 +534,11 @@
                     </div>
                 </div>
 
-                <!-- العمود الثاني: المناهج الدراسية -->
                 <div class="space-y-3 md:col-span-4">
-                    <h4 class="font-serif text-white font-bold text-base tracking-wide border-b border-royal-accent/20 pb-2 flex items-center gap-2"><i class="fa-solid fa-book-bookmark text-royal-accent"></i> Academic Syllabuses</h4>
-                    <ul class="space-y-2 text-xs text-slate-300">
+                    <h4 class="font-serif text-white font-bold text-base tracking-wide border-b border-royal-accent/20 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-royal-accent"></i> Academic Syllabuses
+                    </h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
                         <li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 rounded-full bg-royal-accent"></span><span>Lower Secondary Checkpoint (0861)</span></li>
                         <li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 rounded-full bg-royal-accent"></span><span>Edexcel IGCSE Literature (4ET1)</span></li>
                         <li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 rounded-full bg-royal-accent"></span><span>Edexcel IGCSE Language A (4EA1)</span></li>
@@ -629,10 +547,11 @@
                     </ul>
                 </div>
 
-                <!-- العمود الثالث: التواصل المباشر -->
                 <div class="space-y-3 md:col-span-3">
-                    <h4 class="font-serif text-white font-bold text-base tracking-wide border-b border-royal-accent/20 pb-2 flex items-center gap-2"><i class="fa-solid fa-headset text-royal-accent"></i> Direct Contact</h4>
-                    <ul class="space-y-3 text-xs text-slate-300">
+                    <h4 class="font-serif text-white font-bold text-base tracking-wide border-b border-royal-accent/20 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-headset text-royal-accent"></i> Direct Contact
+                    </h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
                         <li class="flex items-center space-x-2">
                             <i class="fa-solid fa-envelope text-royal-accent text-sm"></i>
                             <a href="mailto:fatma.ramadan1191@yahoo.com" class="hover:text-white transition break-all">fatma.ramadan1191@yahoo.com</a>
@@ -648,9 +567,8 @@
 
             </div>
 
-            <!-- حقوق النشر -->
             <div class="pt-8 border-t border-royal-accent/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-                <p>&copy; 2026 ROYAL ENGLISH ACADEMY BY: MRS. FATMA RAMADAN. All rights reserved.</p>
+                <p>&copy; 2026 Royal English Academy By: Mrs. Fatma Ramadan. All rights reserved.</p>
                 <div class="flex space-x-4 text-royal-accent text-base">
                     <a href="https://wa.me/201014786466" target="_blank" aria-label="WhatsApp" class="hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
@@ -679,86 +597,6 @@
             if (e.target.id === 'videoModal') {
                 toggleVideoModal();
             }
-        }
-
-        let isPlaying = false;
-        function toggleAudioTip() {
-            const icon = document.getElementById('audioIcon');
-            isPlaying = !isPlaying;
-            if (isPlaying) {
-                icon.classList.remove('fa-play');
-                icon.classList.add('fa-pause');
-                alert("Playing Mrs. Fatma's 30-second examiner breakdown audio...");
-            } else {
-                icon.classList.remove('fa-pause');
-                icon.classList.add('fa-play');
-            }
-        }
-
-        function showAnnotatorTab(tab) {
-            const pZoom = document.getElementById('para-zoom');
-            const pCircle = document.getElementById('para-circle');
-            const commentBox = document.getElementById('comment-box');
-            const btnAll = document.getElementById('btn-all');
-            const btnZoom = document.getElementById('btn-zoom');
-            const btnCircle = document.getElementById('btn-circle');
-
-            [btnAll, btnZoom, btnCircle].forEach(btn => {
-                if(btn) btn.className = "px-3 py-1.5 rounded-full bg-slate-100 text-slate-800 text-[11px] font-bold uppercase hover:bg-slate-200 transition border border-royal-accent/20";
-            });
-
-            if (tab === 'all') {
-                if(btnAll) btnAll.className = "px-3 py-1.5 rounded-full bg-slate-200 text-slate-900 text-[11px] font-bold uppercase transition";
-                if(pZoom) pZoom.classList.remove('hidden');
-                if(pCircle) pCircle.classList.remove('hidden');
-                if(commentBox) commentBox.innerHTML = `<p class="font-medium text-slate-900">Full text displayed. Peruse both zoomorphic and structural devices to evaluate complete Level 5 integration.</p>`;
-            } else if (tab === 'zoom') {
-                if(btnZoom) btnZoom.className = "px-3 py-1.5 rounded-full bg-royal-accent text-royal-deep text-[11px] font-bold uppercase transition";
-                if(pZoom) pZoom.classList.remove('hidden');
-                if(pCircle) pCircle.classList.add('hidden');
-                if(commentBox) commentBox.innerHTML = `
-                    <p class="font-medium text-slate-900">Grade 9 responses seamlessly connect zoomorphic characterization with Steinbeck's macro-critique of the American Dream. Avoid isolated quotes without thematic justification.</p>
-                    <div class="p-2.5 rounded-lg bg-white border border-royal-accent/30 text-[11px] text-royal-accent">
-                        <p class="font-bold mb-0.5">Criterion: Language &amp; Structure (Level 5)</p>
-                        <p>Demonstrates sophisticated selection of textual detail with perceptive critical evaluation.</p>
-                    </div>
-                `;
-            } else if (tab === 'circle') {
-                if(btnCircle) btnCircle.className = "px-3 py-1.5 rounded-full bg-royal-accent text-royal-deep text-[11px] font-bold uppercase transition";
-                if(pZoom) pZoom.classList.add('hidden');
-                if(pCircle) pCircle.classList.remove('hidden');
-                if(commentBox) commentBox.innerHTML = `
-                    <p class="font-medium text-slate-900">The circular structure mirrors entrapment and cyclical despair. Notice how the riverbanks represent a temporary sanctuary before inevitable doom.</p>
-                    <div class="p-2.5 rounded-lg bg-white border border-royal-accent/30 text-[11px] text-royal-accent">
-                        <p class="font-bold mb-0.5">Criterion: Form, Structure &amp; Language (Level 5)</p>
-                        <p>Astute tracking of structural motifs to reinforce authorial intent and tragic inevitability.</p>
-                    </div>
-                `;
-            }
-        }
-
-        function highlightComment(type) {
-            const commentBox = document.getElementById('comment-box');
-            if (!commentBox) return;
-            if (type === 'zoom') {
-                commentBox.innerHTML = `
-                    <p class="font-medium text-amber-900">Active Highlight: "bear-like animalistic kinetic verbs"</p>
-                    <p class="text-xs text-slate-600">Links Lennie's physical power with a lack of intellectual agency, highlighting societal preying on the vulnerable.</p>
-                `;
-            } else {
-                commentBox.innerHTML = `
-                    <p class="font-medium text-amber-900">Active Highlight: "live off the fatta the lan'"</p>
-                    <p class="text-xs text-slate-600">The recurring pastoral motif acts as a psychological refuge for George and Lennie amidst economic destitution.</p>
-                `;
-            }
-        }
-
-        function submitEssay(e) {
-            e.preventDefault();
-            const form = document.getElementById('essay-form');
-            const success = document.getElementById('essay-success');
-            if(form) form.style.display = 'none';
-            if(success) success.classList.remove('hidden');
         }
     </script>
 </body>
