@@ -67,17 +67,17 @@
             background: linear-gradient(135deg, #B8924B 0%, #D4B572 50%, #B8924B 100%); 
         }
         
-        .video-btn-royal {
-            background: #131C31;
-            border: 2px solid #B8924B;
-            color: #B8924B;
-            box-shadow: 0 6px 15px -3px rgba(184, 146, 75, 0.25);
+        /* زر تشغيل الفيديو بلون ذهبي فخم ومتناسق */
+        .video-btn-royal-gold {
+            background: linear-gradient(135deg, #B8924B 0%, #D4B572 50%, #B8924B 100%);
+            border: 2px solid #FFFFFF;
+            color: #131C31;
+            box-shadow: 0 8px 20px -3px rgba(184, 146, 75, 0.4);
             transition: all 0.3s ease;
         }
-        .video-btn-royal:hover {
-            transform: scale(1.04);
-            background: #B8924B;
-            color: #131C31;
+        .video-btn-royal-gold:hover {
+            transform: scale(1.06);
+            box-shadow: 0 12px 25px -3px rgba(184, 146, 75, 0.6);
         }
 
         .text-gold-gradient {
@@ -189,6 +189,11 @@
                 </div>
 
                 <div class="flex items-center space-x-4">
+                    <!-- أيقونة الواتساب الذهبية في الهيدر -->
+                    <a href="https://wa.me/201014786466" target="_blank" aria-label="WhatsApp Desk" class="w-10 h-10 rounded-full gold-gradient text-royal-deep flex items-center justify-center hover:scale-105 transition-all shadow-md royal-animated-icon">
+                        <i class="fa-brands fa-whatsapp text-lg font-bold"></i>
+                    </a>
+                    
                     <a href="#cart" aria-label="Cart" class="text-slate-300 hover:text-royal-accent transition-colors relative">
                         <i class="fa-solid fa-cart-shopping text-lg"></i>
                         <span class="absolute -top-1.5 -right-2 bg-royal-accent text-royal-deep text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
@@ -226,7 +231,8 @@
 
                         <div class="relative bg-royal-deep rounded-xl p-5 border border-royal-accent/40 overflow-hidden shadow-inner text-center my-3">
                             <div class="relative z-10 my-3 flex justify-center items-center">
-                                <button onclick="toggleVideoModal()" aria-label="Play Sample Video" class="w-16 h-16 rounded-2xl video-btn-royal flex items-center justify-center shadow-lg focus:outline-none">
+                                <!-- زر الفيديو الذهبي الفخم -->
+                                <button onclick="toggleVideoModal()" aria-label="Play Sample Video" class="w-16 h-16 rounded-2xl video-btn-royal-gold flex items-center justify-center shadow-lg focus:outline-none">
                                     <i class="fa-solid fa-play ml-1 text-xl"></i>
                                 </button>
                             </div>
@@ -255,7 +261,8 @@
 
                         <div class="relative bg-royal-deep rounded-xl p-5 border border-royal-accent/40 overflow-hidden shadow-inner text-center my-3">
                             <div class="relative z-10 my-3 flex justify-center items-center">
-                                <button onclick="toggleVideoModal()" aria-label="Play Sample Video" class="w-16 h-16 rounded-2xl video-btn-royal flex items-center justify-center shadow-lg focus:outline-none">
+                                <!-- زر الفيديو الذهبي الفخم -->
+                                <button onclick="toggleVideoModal()" aria-label="Play Sample Video" class="w-16 h-16 rounded-2xl video-btn-royal-gold flex items-center justify-center shadow-lg focus:outline-none">
                                     <i class="fa-solid fa-play ml-1 text-xl"></i>
                                 </button>
                             </div>
