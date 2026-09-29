@@ -8,10 +8,10 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans, Playfair Display & Cormorant Garamond -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -24,12 +24,13 @@
             heading: ['Outfit', 'sans-serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             serif: ['"Playfair Display"', 'serif'],
+            logo: ['"Cormorant Garamond"', '"Playfair Display"', 'serif'],
           },
           colors: {
             brand: {
-              teal: '#0D9488',
-              'teal-dark': '#0F766E',
-              'teal-light': '#F0FDFA',
+              turquoise: '#1BB5C4',
+              'turquoise-dark': '#008E9B',
+              'turquoise-light': '#EDF9FA',
               dark: '#1E293B',
               coral: '#F97316',
               amber: '#F59E0B',
@@ -41,8 +42,8 @@
           },
           boxShadow: {
             'card-subtle': '0 4px 20px -2px rgba(0, 0, 0, 0.04)',
-            'card-hover': '0 12px 28px -4px rgba(13, 148, 136, 0.12), 0 4px 8px -2px rgba(0, 0, 0, 0.03)',
-            'badge-glow': '0 4px 14px 0 rgba(13, 148, 136, 0.25)'
+            'card-hover': '0 12px 28px -4px rgba(27, 181, 196, 0.16), 0 4px 8px -2px rgba(0, 0, 0, 0.03)',
+            'badge-glow': '0 4px 14px 0 rgba(27, 181, 196, 0.3)'
           }
         }
       }
@@ -56,15 +57,15 @@
       color: #1E293B;
     }
     .hero-pattern {
-      background-color: #F0FDFA;
-      background-image: radial-gradient(#0D9488 0.75px, transparent 0.75px), radial-gradient(#0D9488 0.75px, #F0FDFA 0.75px);
+      background-color: #EDF9FA;
+      background-image: radial-gradient(#1BB5C4 0.75px, transparent 0.75px), radial-gradient(#1BB5C4 0.75px, #EDF9FA 0.75px);
       background-size: 30px 30px;
       background-position: 0 0, 15px 15px;
       background-opacity: 0.15;
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased selection:bg-teal-500 selection:text-white">
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-turquoise-dark selection:text-white">
 
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border transition-all">
@@ -73,7 +74,7 @@
         
         <!-- Brand Logo with Mortarboard SVG -->
         <a href="#" class="flex items-center gap-3 group">
-          <div class="w-11 h-11 rounded-2xl bg-brand-teal text-white flex items-center justify-center p-2 shadow-sm group-hover:scale-105 transition-transform duration-300">
+          <div class="w-11 h-11 rounded-2xl bg-brand-turquoise text-white flex items-center justify-center p-2 shadow-sm group-hover:scale-105 transition-transform duration-300">
             <svg class="w-7 h-7 text-white" viewBox="0 0 600 600" fill="currentColor">
               <!-- Cap top diamond -->
               <polygon points="300,170 510,250 300,330 90,250" />
@@ -85,10 +86,10 @@
             </svg>
           </div>
           <div class="flex flex-col">
-            <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-brand-dark group-hover:text-brand-teal transition-colors uppercase leading-tight">
+            <span class="font-logo font-extrabold text-2xl sm:text-3xl tracking-normal text-brand-dark group-hover:text-brand-turquoise transition-colors leading-tight">
               English Academia
             </span>
-            <span class="text-[10px] uppercase tracking-widest font-bold text-brand-teal">
+            <span class="text-xs font-semibold tracking-wide text-brand-turquoise">
               By Mrs. Fatma Ramadan
             </span>
           </div>
@@ -96,30 +97,30 @@
 
         <!-- Desktop Navigation Links -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-brand-slate">
-          <a href="#upcoming-classes" class="hover:text-brand-teal transition-colors py-1">Live Classes</a>
-          <a href="#recorded-sessions" class="hover:text-brand-teal transition-colors py-1 font-bold text-brand-teal">Recorded Sessions</a>
-          <a href="#masterclass" class="hover:text-brand-teal transition-colors py-1">Masterclass</a>
-          <a href="#hero" class="hover:text-brand-teal transition-colors py-1">Previews & Resources</a>
-          <a href="#blog" class="hover:text-brand-teal transition-colors py-1">Blog</a>
+          <a href="#upcoming-classes" class="hover:text-brand-turquoise transition-colors py-1">Live Classes</a>
+          <a href="#recorded-sessions" class="hover:text-brand-turquoise transition-colors py-1 font-bold text-brand-turquoise">Recorded Sessions</a>
+          <a href="#masterclass" class="hover:text-brand-turquoise transition-colors py-1">Masterclass</a>
+          <a href="#hero" class="hover:text-brand-turquoise transition-colors py-1">Previews & Resources</a>
+          <a href="#blog" class="hover:text-brand-turquoise transition-colors py-1">Blog</a>
         </nav>
 
         <!-- Right Actions -->
         <div class="flex items-center gap-4">
           <!-- Shopping Bag Button -->
-          <button onclick="toggleCartModal()" class="relative p-2 text-brand-slate hover:text-brand-teal transition-colors cursor-pointer" title="View Basket" aria-label="Cart">
+          <button onclick="toggleCartModal()" class="relative p-2 text-brand-slate hover:text-brand-turquoise transition-colors cursor-pointer" title="View Basket" aria-label="Cart">
             <i class="fa-solid fa-basket-shopping text-xl"></i>
-            <span id="cart-counter" class="absolute -top-1 -right-1 w-5 h-5 bg-brand-teal text-white rounded-full text-xs font-bold flex items-center justify-center border-2 border-white shadow-sm">
+            <span id="cart-counter" class="absolute -top-1 -right-1 w-5 h-5 bg-brand-turquoise text-white rounded-full text-xs font-bold flex items-center justify-center border-2 border-white shadow-sm">
               0
             </span>
           </button>
 
           <!-- WhatsApp Direct Desk -->
-          <a href="https://wa.me/201014786466" target="_blank" class="w-10 h-10 rounded-full bg-teal-50 hover:bg-brand-teal text-brand-teal hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm" title="Chat on WhatsApp">
+          <a href="https://wa.me/201014786466" target="_blank" class="w-10 h-10 rounded-full bg-brand-turquoise-light hover:bg-brand-turquoise text-brand-turquoise hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm" title="Chat on WhatsApp">
             <i class="fa-brands fa-whatsapp text-lg"></i>
           </a>
 
           <!-- Login Button -->
-          <button onclick="openLoginModal()" class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full border-2 border-brand-teal text-brand-teal font-heading font-bold text-sm hover:bg-brand-teal hover:text-white transition-all duration-200 cursor-pointer">
+          <button onclick="openLoginModal()" class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full border-2 border-brand-turquoise text-brand-turquoise font-heading font-bold text-sm hover:bg-brand-turquoise hover:text-white transition-all duration-200 cursor-pointer">
             Login
           </button>
 
@@ -134,16 +135,16 @@
 
     <!-- Mobile Slide-down Menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-brand-border bg-white px-4 pt-3 pb-6 space-y-3">
-      <a href="#upcoming-classes" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-teal">Live Classes</a>
-      <a href="#recorded-sessions" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-brand-teal">Recorded Sessions</a>
-      <a href="#masterclass" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-teal">Masterclass</a>
-      <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-teal">Previews & Resources</a>
-      <a href="#blog" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-teal">Blog</a>
+      <a href="#upcoming-classes" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Live Classes</a>
+      <a href="#recorded-sessions" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-brand-turquoise">Recorded Sessions</a>
+      <a href="#masterclass" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Masterclass</a>
+      <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Previews & Resources</a>
+      <a href="#blog" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Blog</a>
       <div class="pt-3 border-t border-slate-100 space-y-2">
-        <a href="https://wa.me/201014786466" target="_blank" class="w-full py-2.5 rounded-xl bg-brand-teal text-white font-heading font-bold text-sm text-center flex items-center justify-center gap-2">
+        <a href="https://wa.me/201014786466" target="_blank" class="w-full py-2.5 rounded-xl bg-brand-turquoise text-white font-heading font-bold text-sm text-center flex items-center justify-center gap-2">
           <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Desk (01014786466)
         </a>
-        <button onclick="openLoginModal(); toggleMobileMenu();" class="w-full py-2.5 rounded-xl border border-brand-teal text-brand-teal font-heading font-bold text-sm text-center">
+        <button onclick="openLoginModal(); toggleMobileMenu();" class="w-full py-2.5 rounded-xl border border-brand-turquoise text-brand-turquoise font-heading font-bold text-sm text-center">
           Login to Account
         </button>
       </div>
@@ -156,16 +157,16 @@
       
       <!-- Top Title & Overview -->
       <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-teal-200/80 shadow-sm">
-          <span class="w-2.5 h-2.5 rounded-full bg-brand-teal animate-pulse"></span>
-          <span class="font-heading font-bold text-xs uppercase tracking-wider text-brand-teal-dark">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-brand-border shadow-sm">
+          <span class="w-2.5 h-2.5 rounded-full bg-brand-turquoise animate-pulse"></span>
+          <span class="font-heading font-bold text-xs uppercase tracking-wider text-brand-turquoise-dark">
             Examiner Methodology &bull; Video Masterclasses & Model Answers
           </span>
         </div>
 
         <h1 class="font-heading font-extrabold text-3xl sm:text-5xl text-brand-dark tracking-tight leading-[1.2]">
           Master English Language & Literature With <br class="hidden sm:inline">
-          <span class="text-brand-teal relative inline-block">
+          <span class="text-brand-turquoise relative inline-block">
             Mrs. Fatma Ramadan
             <svg class="absolute -bottom-2 left-0 w-full h-3 text-brand-amber opacity-80" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none">
               <path d="M2 9C58 2 142 2 198 9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
@@ -182,37 +183,37 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         
         <!-- Preview 1: Checkpoint (0861) -->
-        <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-teal transition-all duration-300 flex flex-col justify-between group">
+        <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full text-xs font-black bg-teal-50 text-brand-teal uppercase tracking-wide border border-teal-100">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-brand-turquoise-light text-brand-turquoise uppercase tracking-wide border border-brand-border">
                 Preview 1: Checkpoint (0861)
               </span>
-              <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-teal-50 text-brand-teal border border-teal-100">
+              <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-brand-turquoise-light text-brand-turquoise border border-brand-border">
                 Full HD
               </span>
             </div>
 
             <!-- Video Player Shell -->
-            <div class="relative rounded-2xl overflow-hidden bg-gradient-to-br from-teal-50 to-slate-100 aspect-video flex items-center justify-center border-2 border-brand-teal/20 group-hover:border-brand-teal transition">
-              <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#0D9488_1.5px,transparent_1.5px)] [background-size:16px_16px]"></div>
+            <div class="relative rounded-2xl overflow-hidden bg-gradient-to-br from-brand-turquoise-light to-slate-100 aspect-video flex items-center justify-center border-2 border-brand-turquoise/20 group-hover:border-brand-turquoise transition">
+              <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#1BB5C4_1.5px,transparent_1.5px)] [background-size:16px_16px]"></div>
               
-              <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="relative z-20 w-16 h-16 rounded-2xl bg-brand-teal text-white flex items-center justify-center shadow-badge-glow hover:scale-110 hover:bg-brand-teal-dark transition-all duration-300 cursor-pointer" title="Play Preview">
+              <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="relative z-20 w-16 h-16 rounded-2xl bg-brand-turquoise text-white flex items-center justify-center shadow-badge-glow hover:scale-110 hover:bg-brand-turquoise-dark transition-all duration-300 cursor-pointer" title="Play Preview">
                 <i class="fa-solid fa-play text-xl ml-0.5"></i>
               </button>
 
               <div class="absolute bottom-3 left-3 right-3 z-20 flex items-center justify-between text-brand-dark text-xs bg-white/90 backdrop-blur-sm p-2 rounded-xl border border-brand-border shadow-sm">
                 <div>
                   <p class="font-bold text-xs">Lower Secondary Checkpoint English</p>
-                  <p class="text-[10px] text-brand-teal font-semibold">By Mrs. Fatma Ramadan</p>
+                  <p class="text-[10px] text-brand-turquoise font-semibold">By Mrs. Fatma Ramadan</p>
                 </div>
-                <span class="bg-teal-100 text-brand-teal px-2 py-0.5 rounded font-bold text-[10px]">Preview</span>
+                <span class="bg-brand-turquoise-light text-brand-turquoise px-2 py-0.5 rounded font-bold text-[10px]">Preview</span>
               </div>
             </div>
 
             <div class="p-3 bg-brand-soft rounded-2xl border border-brand-border flex items-center justify-between text-xs">
               <span class="font-bold text-brand-dark flex items-center gap-1.5">
-                <i class="fa-solid fa-file-pdf text-brand-teal"></i> Sample PDF Included
+                <i class="fa-solid fa-file-pdf text-brand-turquoise"></i> Sample PDF Included
               </span>
               <span class="text-slate-400 text-[11px]">Annotated Model Answers</span>
             </div>
@@ -220,11 +221,11 @@
 
           <!-- Action Buttons -->
           <div class="pt-5 mt-4 border-t border-slate-100 flex items-center gap-3">
-            <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="flex-1 py-3 rounded-xl bg-brand-teal hover:bg-brand-teal-dark text-white font-heading font-bold text-xs shadow-sm transition flex items-center justify-center gap-2 cursor-pointer">
+            <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="flex-1 py-3 rounded-xl bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs shadow-sm transition flex items-center justify-center gap-2 cursor-pointer">
               <i class="fa-solid fa-play text-xs"></i>
               <span>Watch Video</span>
             </button>
-            <a href="https://wa.me/201014786466?text=Hello%20Mrs.%20Fatma,%20please%20send%20the%20Checkpoint%200861%20Sample%20PDF." target="_blank" class="px-4 py-3 rounded-xl border border-brand-teal text-brand-teal hover:bg-teal-50 font-heading font-bold text-xs transition flex items-center justify-center gap-1.5">
+            <a href="https://wa.me/201014786466?text=Hello%20Mrs.%20Fatma,%20please%20send%20the%20Checkpoint%200861%20Sample%20PDF." target="_blank" class="px-4 py-3 rounded-xl border border-brand-turquoise text-brand-turquoise hover:bg-brand-turquoise-light font-heading font-bold text-xs transition flex items-center justify-center gap-1.5">
               <i class="fa-solid fa-download"></i>
               <span>Download PDF</span>
             </a>
@@ -232,7 +233,7 @@
         </div>
 
         <!-- Preview 2: IGCSE Literature -->
-        <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-teal transition-all duration-300 flex flex-col justify-between group">
+        <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-50 text-amber-800 uppercase tracking-wide border border-amber-200">
@@ -244,17 +245,17 @@
             </div>
 
             <!-- Video Player Shell -->
-            <div class="relative rounded-2xl overflow-hidden bg-gradient-to-br from-amber-50/60 to-slate-100 aspect-video flex items-center justify-center border-2 border-brand-teal/20 group-hover:border-brand-teal transition">
-              <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#0D9488_1.5px,transparent_1.5px)] [background-size:16px_16px]"></div>
+            <div class="relative rounded-2xl overflow-hidden bg-gradient-to-br from-amber-50/60 to-slate-100 aspect-video flex items-center justify-center border-2 border-brand-turquoise/20 group-hover:border-brand-turquoise transition">
+              <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#1BB5C4_1.5px,transparent_1.5px)] [background-size:16px_16px]"></div>
               
-              <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="relative z-20 w-16 h-16 rounded-2xl bg-brand-teal text-white flex items-center justify-center shadow-badge-glow hover:scale-110 hover:bg-brand-teal-dark transition-all duration-300 cursor-pointer" title="Play Preview">
+              <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="relative z-20 w-16 h-16 rounded-2xl bg-brand-turquoise text-white flex items-center justify-center shadow-badge-glow hover:scale-110 hover:bg-brand-turquoise-dark transition-all duration-300 cursor-pointer" title="Play Preview">
                 <i class="fa-solid fa-play text-xl ml-0.5"></i>
               </button>
 
               <div class="absolute bottom-3 left-3 right-3 z-20 flex items-center justify-between text-brand-dark text-xs bg-white/90 backdrop-blur-sm p-2 rounded-xl border border-brand-border shadow-sm">
                 <div>
                   <p class="font-bold text-xs">Edexcel IGCSE Literature (4ET1)</p>
-                  <p class="text-[10px] text-brand-teal font-semibold">By Mrs. Fatma Ramadan</p>
+                  <p class="text-[10px] text-brand-turquoise font-semibold">By Mrs. Fatma Ramadan</p>
                 </div>
                 <span class="bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-bold text-[10px]">Preview</span>
               </div>
@@ -262,7 +263,7 @@
 
             <div class="p-3 bg-brand-soft rounded-2xl border border-brand-border flex items-center justify-between text-xs">
               <span class="font-bold text-brand-dark flex items-center gap-1.5">
-                <i class="fa-solid fa-file-pdf text-brand-teal"></i> Sample PDF Included
+                <i class="fa-solid fa-file-pdf text-brand-turquoise"></i> Sample PDF Included
               </span>
               <span class="text-slate-400 text-[11px]">Of Mice & Men Analysis</span>
             </div>
@@ -270,11 +271,11 @@
 
           <!-- Action Buttons -->
           <div class="pt-5 mt-4 border-t border-slate-100 flex items-center gap-3">
-            <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="flex-1 py-3 rounded-xl bg-brand-teal hover:bg-brand-teal-dark text-white font-heading font-bold text-xs shadow-sm transition flex items-center justify-center gap-2 cursor-pointer">
+            <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="flex-1 py-3 rounded-xl bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs shadow-sm transition flex items-center justify-center gap-2 cursor-pointer">
               <i class="fa-solid fa-play text-xs"></i>
               <span>Watch Video</span>
             </button>
-            <a href="https://wa.me/201014786466?text=Hello%20Mrs.%20Fatma,%20please%20send%20the%20Edexcel%20Literature%20Sample%20PDF." target="_blank" class="px-4 py-3 rounded-xl border border-brand-teal text-brand-teal hover:bg-teal-50 font-heading font-bold text-xs transition flex items-center justify-center gap-1.5">
+            <a href="https://wa.me/201014786466?text=Hello%20Mrs.%20Fatma,%20please%20send%20the%20Edexcel%20Literature%20Sample%20PDF." target="_blank" class="px-4 py-3 rounded-xl border border-brand-turquoise text-brand-turquoise hover:bg-brand-turquoise-light font-heading font-bold text-xs transition flex items-center justify-center gap-1.5">
               <i class="fa-solid fa-download"></i>
               <span>Download PDF</span>
             </a>
@@ -293,10 +294,10 @@
       <!-- Section Header -->
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-4 border-b border-brand-border gap-4">
         <div>
-          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-teal">Live Online Tuition</span>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-turquoise">Live Online Tuition</span>
           <h2 class="font-heading font-black text-3xl sm:text-4xl text-brand-dark mt-1">Upcoming classes</h2>
         </div>
-        <a href="#upcoming-classes" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-teal hover:text-brand-teal-dark transition-colors">
+        <a href="#upcoming-classes" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-turquoise hover:text-brand-turquoise-dark transition-colors">
           <span>See all classes</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
@@ -306,7 +307,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
 
         <!-- Class Card 1 -->
-        <div class="bg-brand-soft rounded-3xl p-6 sm:p-7 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-teal transition-all duration-300 flex flex-col justify-between group">
+        <div class="bg-brand-soft rounded-3xl p-6 sm:p-7 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200">
@@ -318,7 +319,7 @@
             </div>
 
             <div class="pt-2">
-              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-teal transition-colors leading-snug">
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
                 DCB Only – Group Classes for Years 7-13
               </h3>
               <p class="text-sm text-slate-500 mt-2 font-normal leading-relaxed">
@@ -329,7 +330,7 @@
 
           <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
             <span class="text-xs font-semibold text-slate-400">Weekly Cohort</span>
-            <button onclick="handleEnrollClass('DCB Only – Group Classes for Years 7-13')" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-teal group-hover:text-brand-teal-dark transition-colors cursor-pointer">
+            <button onclick="handleEnrollClass('DCB Only – Group Classes for Years 7-13')" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-turquoise group-hover:text-brand-turquoise-dark transition-colors cursor-pointer">
               <span>Learn more</span>
               <i class="fa-solid fa-chevron-right text-xs"></i>
             </button>
@@ -337,8 +338,8 @@
         </div>
 
         <!-- Class Card 2 -->
-        <div class="bg-brand-soft rounded-3xl p-6 sm:p-7 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-teal transition-all duration-300 flex flex-col justify-between group relative ring-2 ring-brand-teal/20">
-          <div class="absolute -top-3 right-6 bg-brand-teal text-white text-[10px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-sm">
+        <div class="bg-brand-soft rounded-3xl p-6 sm:p-7 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition-all duration-300 flex flex-col justify-between group relative ring-2 ring-brand-turquoise/20">
+          <div class="absolute -top-3 right-6 bg-brand-turquoise text-white text-[10px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-sm">
             High Demand
           </div>
           
@@ -355,17 +356,17 @@
             <!-- Schedule info -->
             <div class="space-y-1 bg-white p-3 rounded-xl border border-slate-100 text-xs font-semibold text-slate-600">
               <div class="flex items-center gap-2">
-                <i class="fa-regular fa-clock text-brand-teal"></i>
+                <i class="fa-regular fa-clock text-brand-turquoise"></i>
                 <span>Mon 1:00 pm - 2:00 pm</span>
               </div>
               <div class="flex items-center gap-2">
-                <i class="fa-regular fa-clock text-brand-teal"></i>
+                <i class="fa-regular fa-clock text-brand-turquoise"></i>
                 <span>Wed 1:00 pm - 2:00 pm</span>
               </div>
             </div>
 
             <div class="pt-1">
-              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-teal transition-colors leading-snug">
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
                 Masterclass – IGCSE First Language English
               </h3>
               <p class="text-sm text-slate-500 mt-2 font-normal leading-relaxed">
@@ -376,7 +377,7 @@
 
           <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
             <span class="text-xs font-semibold text-slate-400">Intensive Course</span>
-            <button onclick="handleEnrollClass('Masterclass – IGCSE First Language English')" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-teal group-hover:text-brand-teal-dark transition-colors cursor-pointer">
+            <button onclick="handleEnrollClass('Masterclass – IGCSE First Language English')" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-turquoise group-hover:text-brand-turquoise-dark transition-colors cursor-pointer">
               <span>Learn more</span>
               <i class="fa-solid fa-chevron-right text-xs"></i>
             </button>
@@ -384,7 +385,7 @@
         </div>
 
         <!-- Class Card 3 -->
-        <div class="bg-brand-soft rounded-3xl p-6 sm:p-7 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-teal transition-all duration-300 flex flex-col justify-between group">
+        <div class="bg-brand-soft rounded-3xl p-6 sm:p-7 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200">
@@ -398,17 +399,17 @@
             <!-- Schedule info -->
             <div class="space-y-1 bg-white p-3 rounded-xl border border-slate-100 text-xs font-semibold text-slate-600">
               <div class="flex items-center gap-2">
-                <i class="fa-regular fa-clock text-brand-teal"></i>
+                <i class="fa-regular fa-clock text-brand-turquoise"></i>
                 <span>Mon 2:10 pm - 3:10 pm</span>
               </div>
               <div class="flex items-center gap-2">
-                <i class="fa-regular fa-clock text-brand-teal"></i>
+                <i class="fa-regular fa-clock text-brand-turquoise"></i>
                 <span>Wed 2:10 pm - 3:10 pm</span>
               </div>
             </div>
 
             <div class="pt-1">
-              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-teal transition-colors leading-snug">
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
                 Masterclass – O Level English Language 1123
               </h3>
               <p class="text-sm text-slate-500 mt-2 font-normal leading-relaxed">
@@ -419,7 +420,7 @@
 
           <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
             <span class="text-xs font-semibold text-slate-400">8-Week Cohort</span>
-            <button onclick="handleEnrollClass('Masterclass – O Level English Language 1123')" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-teal group-hover:text-brand-teal-dark transition-colors cursor-pointer">
+            <button onclick="handleEnrollClass('Masterclass – O Level English Language 1123')" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-turquoise group-hover:text-brand-turquoise-dark transition-colors cursor-pointer">
               <span>Learn more</span>
               <i class="fa-solid fa-chevron-right text-xs"></i>
             </button>
@@ -436,7 +437,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-teal">Tailored Learning Options</span>
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-turquoise">Tailored Learning Options</span>
         <h2 class="font-heading font-black text-3xl sm:text-5xl text-brand-dark">Study with me</h2>
         <p class="text-slate-600 text-base">Select the format that fits your learning pace, exam goals, and preparation timeline.</p>
       </div>
@@ -447,7 +448,7 @@
         <!-- Pillar 1: Group Class -->
         <div class="bg-white rounded-3xl p-8 border border-brand-border shadow-card-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-2xl group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+            <div class="w-14 h-14 rounded-2xl bg-brand-turquoise-light text-brand-turquoise flex items-center justify-center text-2xl group-hover:bg-brand-turquoise group-hover:text-white transition-colors duration-300">
               <i class="fa-solid fa-users"></i>
             </div>
             <h3 class="font-heading font-extrabold text-2xl text-brand-dark">Group class</h3>
@@ -461,15 +462,15 @@
               <span class="text-xs font-semibold text-slate-400 block uppercase">Tuition Rate</span>
               <span class="font-heading font-black text-xl text-brand-dark">From £40/hour</span>
             </div>
-            <button onclick="handleEnrollClass('Weekly Group Class (0500/0990)')" class="px-5 py-2.5 rounded-full bg-slate-100 hover:bg-brand-teal hover:text-white text-brand-dark font-heading font-bold text-xs transition-colors cursor-pointer">
+            <button onclick="handleEnrollClass('Weekly Group Class (0500/0990)')" class="px-5 py-2.5 rounded-full bg-slate-100 hover:bg-brand-turquoise hover:text-white text-brand-dark font-heading font-bold text-xs transition-colors cursor-pointer">
               Book Seat
             </button>
           </div>
         </div>
 
         <!-- Pillar 2: Masterclass -->
-        <div class="bg-white rounded-3xl p-8 border-2 border-brand-teal shadow-card-hover flex flex-col justify-between group relative overflow-hidden">
-          <div class="absolute top-0 right-0 bg-brand-teal text-white text-[11px] font-black uppercase tracking-wider px-4 py-1 rounded-bl-2xl">
+        <div class="bg-white rounded-3xl p-8 border-2 border-brand-turquoise shadow-card-hover flex flex-col justify-between group relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-brand-turquoise text-white text-[11px] font-black uppercase tracking-wider px-4 py-1 rounded-bl-2xl">
             Popular
           </div>
           
@@ -486,9 +487,9 @@
           <div class="pt-8 mt-6 border-t border-slate-100 flex items-center justify-between">
             <div>
               <span class="text-xs font-semibold text-slate-400 block uppercase">Tuition Rate</span>
-              <span class="font-heading font-black text-xl text-brand-teal">From £25/hour</span>
+              <span class="font-heading font-black text-xl text-brand-turquoise">From £25/hour</span>
             </div>
-            <button onclick="handleEnrollClass('Two-Month Intensive Masterclass')" class="px-5 py-2.5 rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white font-heading font-bold text-xs transition-colors shadow-sm cursor-pointer">
+            <button onclick="handleEnrollClass('Two-Month Intensive Masterclass')" class="px-5 py-2.5 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition-colors shadow-sm cursor-pointer">
               Enroll Now
             </button>
           </div>
@@ -497,7 +498,7 @@
         <!-- Pillar 3: Recorded Sessions Self-Study -->
         <div class="bg-white rounded-3xl p-8 border border-brand-border shadow-card-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-2xl group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+            <div class="w-14 h-14 rounded-2xl bg-brand-turquoise-light text-brand-turquoise flex items-center justify-center text-2xl group-hover:bg-brand-turquoise group-hover:text-white transition-colors duration-300">
               <i class="fa-solid fa-circle-play"></i>
             </div>
             <h3 class="font-heading font-extrabold text-2xl text-brand-dark">Recorded Sessions</h3>
@@ -511,7 +512,7 @@
               <span class="text-xs font-semibold text-slate-400 block uppercase">Tuition Rate</span>
               <span class="font-heading font-black text-xl text-brand-dark">From £0/hour</span>
             </div>
-            <a href="#recorded-sessions" class="px-5 py-2.5 rounded-full bg-slate-100 hover:bg-brand-teal hover:text-white text-brand-dark font-heading font-bold text-xs transition-colors">
+            <a href="#recorded-sessions" class="px-5 py-2.5 rounded-full bg-slate-100 hover:bg-brand-turquoise hover:text-white text-brand-dark font-heading font-bold text-xs transition-colors">
               Explore
             </a>
           </div>
@@ -529,10 +530,10 @@
       <!-- Section Title -->
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-4 border-b border-brand-border gap-4">
         <div>
-          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-teal">Self-Paced Curriculum</span>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-turquoise">Self-Paced Curriculum</span>
           <h2 class="font-heading font-black text-3xl sm:text-4xl text-brand-dark mt-1">My latest recorded sessions</h2>
         </div>
-        <a href="#recorded-sessions" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-teal hover:text-brand-teal-dark transition-colors">
+        <a href="#recorded-sessions" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-turquoise hover:text-brand-turquoise-dark transition-colors">
           <span>See all</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
@@ -549,15 +550,15 @@
                 Premium
               </span>
               <span class="text-xs font-bold text-slate-500 flex items-center gap-1.5">
-                <i class="fa-regular fa-clock text-brand-teal"></i> Time: 9 weeks
+                <i class="fa-regular fa-clock text-brand-turquoise"></i> Time: 9 weeks
               </span>
             </div>
 
             <div>
-              <span class="inline-block text-[11px] font-black uppercase text-brand-teal bg-teal-50 px-2.5 py-0.5 rounded-md mb-2">
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
                 Featured &bull; First Language English IGCSE
               </span>
-              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-teal transition-colors leading-snug">
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
                 First Language English IGCSE Masterclass – Recorded Sessions
               </h3>
               <p class="text-xs text-slate-500 mt-2 leading-relaxed">
@@ -568,7 +569,7 @@
 
           <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
             <span class="font-heading font-black text-brand-dark text-lg">£85.00</span>
-            <button onclick="addToBasket('First Language English IGCSE Masterclass – Recorded Sessions', 85)" class="px-4 py-2 rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white font-heading font-bold text-xs transition shadow-sm cursor-pointer">
+            <button onclick="addToBasket('First Language English IGCSE Masterclass – Recorded Sessions', 85)" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm cursor-pointer">
               Add to Basket
             </button>
           </div>
@@ -582,15 +583,15 @@
                 Free
               </span>
               <span class="text-xs font-bold text-slate-500 flex items-center gap-1.5">
-                <i class="fa-regular fa-clock text-brand-teal"></i> Time: 1 hour
+                <i class="fa-regular fa-clock text-brand-turquoise"></i> Time: 1 hour
               </span>
             </div>
 
             <div>
-              <span class="inline-block text-[11px] font-black uppercase text-brand-teal bg-teal-50 px-2.5 py-0.5 rounded-md mb-2">
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
                 First Language English - Paper 2 Writing
               </span>
-              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-teal transition-colors leading-snug">
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
                 Directed Writing for IGCSE First Language English (Recorded)
               </h3>
               <p class="text-xs text-slate-500 mt-2 leading-relaxed">
@@ -601,7 +602,7 @@
 
           <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
             <span class="font-heading font-black text-emerald-600 text-lg">Free</span>
-            <button onclick="addToBasket('Directed Writing for IGCSE First Language English', 0)" class="px-4 py-2 rounded-full bg-white hover:bg-brand-teal hover:text-white text-brand-teal border border-brand-teal font-heading font-bold text-xs transition cursor-pointer">
+            <button onclick="addToBasket('Directed Writing for IGCSE First Language English', 0)" class="px-4 py-2 rounded-full bg-white hover:bg-brand-turquoise hover:text-white text-brand-turquoise border border-brand-turquoise font-heading font-bold text-xs transition cursor-pointer">
               Start Free
             </button>
           </div>
@@ -615,15 +616,15 @@
                 Free
               </span>
               <span class="text-xs font-bold text-slate-500 flex items-center gap-1.5">
-                <i class="fa-regular fa-clock text-brand-teal"></i> Time: 45 minutes
+                <i class="fa-regular fa-clock text-brand-turquoise"></i> Time: 45 minutes
               </span>
             </div>
 
             <div>
-              <span class="inline-block text-[11px] font-black uppercase text-brand-teal bg-teal-50 px-2.5 py-0.5 rounded-md mb-2">
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
                 First Language English - Paper 1 Reading
               </span>
-              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-teal transition-colors leading-snug">
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
                 Formal Report Writing for IGCSE First Language English (Recorded)
               </h3>
               <p class="text-xs text-slate-500 mt-2 leading-relaxed">
@@ -634,7 +635,7 @@
 
           <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
             <span class="font-heading font-black text-emerald-600 text-lg">Free</span>
-            <button onclick="addToBasket('Formal Report Writing for IGCSE First Language English', 0)" class="px-4 py-2 rounded-full bg-white hover:bg-brand-teal hover:text-white text-brand-teal border border-brand-teal font-heading font-bold text-xs transition cursor-pointer">
+            <button onclick="addToBasket('Formal Report Writing for IGCSE First Language English', 0)" class="px-4 py-2 rounded-full bg-white hover:bg-brand-turquoise hover:text-white text-brand-turquoise border border-brand-turquoise font-heading font-bold text-xs transition cursor-pointer">
               Start Free
             </button>
           </div>
@@ -646,27 +647,27 @@
       <div class="pt-6">
         <h3 class="font-heading font-extrabold text-2xl text-brand-dark mb-6 flex items-center gap-2">
           <span>Featured Recorded Sessions</span>
-          <span class="w-2 h-2 rounded-full bg-brand-teal"></span>
+          <span class="w-2 h-2 rounded-full bg-brand-turquoise"></span>
         </h3>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           <!-- Featured Card 1 -->
-          <div class="bg-gradient-to-br from-teal-50/60 to-white rounded-3xl p-8 border-2 border-brand-teal shadow-card-subtle flex flex-col justify-between group">
+          <div class="bg-gradient-to-br from-brand-turquoise-light to-white rounded-3xl p-8 border-2 border-brand-turquoise shadow-card-subtle flex flex-col justify-between group">
             <div class="space-y-3">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-100 text-amber-900 uppercase tracking-wide inline-block">
                 Premium
               </span>
-              <h4 class="font-heading font-extrabold text-2xl text-brand-dark group-hover:text-brand-teal transition-colors">
+              <h4 class="font-heading font-extrabold text-2xl text-brand-dark group-hover:text-brand-turquoise transition-colors">
                 First Language English IGCSE Masterclass – Recorded Sessions
               </h4>
               <p class="text-sm text-slate-600 leading-relaxed">
                 The comprehensive examiner masterclass package with full access to recorded workshops, mark schemes, model essays, and syllabus notes.
               </p>
             </div>
-            <div class="pt-6 mt-6 border-t border-teal-100 flex items-center justify-between">
-              <span class="text-xs font-bold text-brand-teal uppercase tracking-wider">Updated for 2027</span>
-              <button onclick="openCoursePreview('First Language English IGCSE Masterclass – Recorded Sessions')" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white font-heading font-bold text-sm transition cursor-pointer">
+            <div class="pt-6 mt-6 border-t border-brand-turquoise/20 flex items-center justify-between">
+              <span class="text-xs font-bold text-brand-turquoise uppercase tracking-wider">Updated for 2027</span>
+              <button onclick="openCoursePreview('First Language English IGCSE Masterclass – Recorded Sessions')" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-sm transition cursor-pointer">
                 <span>Learn more</span>
                 <i class="fa-solid fa-arrow-right text-xs"></i>
               </button>
@@ -674,12 +675,12 @@
           </div>
 
           <!-- Featured Card 2 -->
-          <div class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 border border-brand-border shadow-card-subtle flex flex-col justify-between group hover:border-brand-teal transition">
+          <div class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 border border-brand-border shadow-card-subtle flex flex-col justify-between group hover:border-brand-turquoise transition">
             <div class="space-y-3">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-100 text-amber-900 uppercase tracking-wide inline-block">
                 Premium
               </span>
-              <h4 class="font-heading font-extrabold text-2xl text-brand-dark group-hover:text-brand-teal transition-colors">
+              <h4 class="font-heading font-extrabold text-2xl text-brand-dark group-hover:text-brand-turquoise transition-colors">
                 First Language English IGCSE – Paper 2 – Premium Writing Recorded Sessions
               </h4>
               <p class="text-sm text-slate-600 leading-relaxed">
@@ -688,7 +689,7 @@
             </div>
             <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
               <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Exam Board Aligned</span>
-              <button onclick="openCoursePreview('First Language English IGCSE – Paper 2 – Premium Writing Recorded Sessions')" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white font-heading font-bold text-sm transition cursor-pointer">
+              <button onclick="openCoursePreview('First Language English IGCSE – Paper 2 – Premium Writing Recorded Sessions')" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-sm transition cursor-pointer">
                 <span>Learn more</span>
                 <i class="fa-solid fa-arrow-right text-xs"></i>
               </button>
@@ -706,7 +707,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-teal">Proven Exam Success</span>
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-turquoise">Proven Exam Success</span>
         <h2 class="font-heading font-black text-3xl sm:text-5xl text-brand-dark">Testimonials</h2>
         <p class="text-slate-600 text-base">Feedback from students, parents, and fellow international school educators.</p>
       </div>
@@ -727,7 +728,7 @@
           </blockquote>
           <div class="pt-4 border-t border-slate-100">
             <p class="font-heading font-bold text-sm text-brand-dark">johnchuah007</p>
-            <p class="text-xs text-brand-teal font-semibold">Narrative Writing Unit</p>
+            <p class="text-xs text-brand-turquoise font-semibold">Narrative Writing Unit</p>
           </div>
         </div>
 
@@ -767,7 +768,7 @@
           </blockquote>
           <div class="pt-4 border-t border-slate-100">
             <p class="font-heading font-bold text-sm text-brand-dark">Laura K.</p>
-            <p class="text-xs text-brand-teal font-semibold">Teachers Pay Teachers</p>
+            <p class="text-xs text-brand-turquoise font-semibold">Teachers Pay Teachers</p>
           </div>
         </div>
 
@@ -783,7 +784,7 @@
         
         <!-- Experience Graphic (Light Gradient with Mortarboard SVG) -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-72 sm:w-80 h-72 sm:h-80 bg-gradient-to-tr from-teal-500 to-teal-400 rounded-3xl p-8 shadow-card-hover flex flex-col justify-between text-white overflow-hidden">
+          <div class="relative w-72 sm:w-80 h-72 sm:h-80 bg-gradient-to-tr from-brand-turquoise to-brand-turquoise-dark rounded-3xl p-8 shadow-card-hover flex flex-col justify-between text-white overflow-hidden">
             <div class="absolute -right-6 -bottom-6 w-40 h-40 bg-white/20 rounded-full blur-2xl"></div>
             
             <div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center p-2.5">
@@ -797,12 +798,12 @@
 
             <div>
               <span class="font-heading font-black text-6xl sm:text-7xl block leading-none">12</span>
-              <span class="font-heading font-bold text-lg sm:text-xl uppercase tracking-wider block mt-2 text-teal-50">
+              <span class="font-heading font-bold text-lg sm:text-xl uppercase tracking-wider block mt-2 text-brand-turquoise-light">
                 years of experience
               </span>
             </div>
 
-            <div class="flex items-center gap-2 text-xs font-semibold text-teal-100">
+            <div class="flex items-center gap-2 text-xs font-semibold text-brand-turquoise-light">
               <i class="fa-solid fa-check-double text-white"></i>
               <span>UK & International Examiner</span>
             </div>
@@ -811,7 +812,7 @@
 
         <!-- Teacher Bio Information -->
         <div class="lg:col-span-7 space-y-6">
-          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-teal">Meet The Educator</span>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-turquoise">Meet The Educator</span>
           <h2 class="font-heading font-black text-3xl sm:text-5xl text-brand-dark">About your teacher</h2>
 
           <div class="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
@@ -827,7 +828,7 @@
           </div>
 
           <div class="pt-4">
-            <button onclick="openBioModal()" class="px-8 py-3.5 rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white font-heading font-bold text-sm shadow-badge-glow transition-all duration-200 cursor-pointer">
+            <button onclick="openBioModal()" class="px-8 py-3.5 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-sm shadow-badge-glow transition-all duration-200 cursor-pointer">
               Learn more about me
             </button>
           </div>
@@ -868,10 +869,10 @@
       <!-- Section Header -->
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 pb-4 border-b border-brand-border gap-4">
         <div>
-          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-teal">Model Essays & Exemplars</span>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-turquoise">Model Essays & Exemplars</span>
           <h2 class="font-heading font-black text-3xl sm:text-4xl text-brand-dark mt-1">Blog</h2>
         </div>
-        <button onclick="showToast('Loading full blog archives...')" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-teal hover:text-brand-teal-dark transition-colors cursor-pointer">
+        <button onclick="showToast('Loading full blog archives...')" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-turquoise hover:text-brand-turquoise-dark transition-colors cursor-pointer">
           <span>See more</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
         </button>
@@ -883,8 +884,8 @@
         <!-- Blog Post 1 -->
         <article class="bg-brand-soft rounded-3xl p-8 border border-brand-border hover:shadow-card-hover transition duration-300 flex flex-col justify-between">
           <div class="space-y-4">
-            <span class="text-xs font-bold text-brand-teal uppercase tracking-wider">Literary Analysis</span>
-            <h3 class="font-heading font-extrabold text-2xl text-brand-dark hover:text-brand-teal transition-colors">
+            <span class="text-xs font-bold text-brand-turquoise uppercase tracking-wider">Literary Analysis</span>
+            <h3 class="font-heading font-extrabold text-2xl text-brand-dark hover:text-brand-turquoise transition-colors">
               The Whale Rider – Significance of Rawiri – Grade 9 Student Essay
             </h3>
             <p class="text-slate-600 text-sm leading-relaxed font-serif">
@@ -894,7 +895,7 @@
           
           <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-400">
             <span>April 07, 2026</span>
-            <span class="text-brand-teal hover:underline cursor-pointer">Read Full Analysis &rarr;</span>
+            <span class="text-brand-turquoise hover:underline cursor-pointer">Read Full Analysis &rarr;</span>
           </div>
         </article>
 
@@ -902,7 +903,7 @@
         <article class="bg-brand-soft rounded-3xl p-8 border border-brand-border hover:shadow-card-hover transition duration-300 flex flex-col justify-between">
           <div class="space-y-4">
             <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Descriptive Writing</span>
-            <h3 class="font-heading font-extrabold text-2xl text-brand-dark hover:text-brand-teal transition-colors">
+            <h3 class="font-heading font-extrabold text-2xl text-brand-dark hover:text-brand-turquoise transition-colors">
               A* Description: The Castle by Cyrus
             </h3>
             <p class="text-slate-600 text-sm leading-relaxed font-serif">
@@ -912,7 +913,7 @@
           
           <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-400">
             <span>March 31, 2026</span>
-            <span class="text-brand-teal hover:underline cursor-pointer">Read Full Analysis &rarr;</span>
+            <span class="text-brand-turquoise hover:underline cursor-pointer">Read Full Analysis &rarr;</span>
           </div>
         </article>
 
@@ -922,13 +923,13 @@
   </section>
 
   <!-- Register Call-To-Action Banner -->
-  <section class="py-16 bg-gradient-to-r from-teal-50 via-white to-teal-50 border-b border-brand-border text-brand-dark relative overflow-hidden">
+  <section class="py-16 bg-gradient-to-r from-brand-turquoise-light via-white to-brand-turquoise-light border-b border-brand-border text-brand-dark relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
       <h2 class="font-heading font-black text-3xl sm:text-4xl max-w-2xl mx-auto leading-snug">
         Register for upcoming group classes and masterclasses now.
       </h2>
       <div>
-        <a href="#upcoming-classes" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white font-heading font-bold text-sm tracking-wide shadow-badge-glow transition-all duration-200 transform hover:-translate-y-0.5">
+        <a href="#upcoming-classes" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-sm tracking-wide shadow-badge-glow transition-all duration-200 transform hover:-translate-y-0.5">
           See upcoming classes
         </a>
       </div>
@@ -946,9 +947,9 @@
         <div>
           <h4 class="font-heading font-extrabold text-sm uppercase tracking-wider text-brand-dark mb-4">Tutoring</h4>
           <ul class="space-y-2.5 text-xs font-semibold">
-            <li><a href="#masterclass" class="hover:text-brand-teal transition-colors">Group class</a></li>
-            <li><a href="#masterclass" class="hover:text-brand-teal transition-colors">Masterclass</a></li>
-            <li><a href="#testimonials" class="hover:text-brand-teal transition-colors">Testimonials</a></li>
+            <li><a href="#masterclass" class="hover:text-brand-turquoise transition-colors">Group class</a></li>
+            <li><a href="#masterclass" class="hover:text-brand-turquoise transition-colors">Masterclass</a></li>
+            <li><a href="#testimonials" class="hover:text-brand-turquoise transition-colors">Testimonials</a></li>
           </ul>
         </div>
 
@@ -956,8 +957,8 @@
         <div>
           <h4 class="font-heading font-extrabold text-sm uppercase tracking-wider text-brand-dark mb-4">Students</h4>
           <ul class="space-y-2.5 text-xs font-semibold">
-            <li><a href="#recorded-sessions" class="hover:text-brand-teal transition-colors">IGCSE English</a></li>
-            <li><a href="#recorded-sessions" class="hover:text-brand-teal transition-colors">IB English A</a></li>
+            <li><a href="#recorded-sessions" class="hover:text-brand-turquoise transition-colors">IGCSE English</a></li>
+            <li><a href="#recorded-sessions" class="hover:text-brand-turquoise transition-colors">IB English A</a></li>
           </ul>
         </div>
 
@@ -965,8 +966,8 @@
         <div>
           <h4 class="font-heading font-extrabold text-sm uppercase tracking-wider text-brand-dark mb-4">Teachers</h4>
           <ul class="space-y-2.5 text-xs font-semibold">
-            <li><a href="#hero" class="hover:text-brand-teal transition-colors">Free IGCSE resources</a></li>
-            <li><a href="#hero" class="hover:text-brand-teal transition-colors">Free IB resources</a></li>
+            <li><a href="#hero" class="hover:text-brand-turquoise transition-colors">Free IGCSE resources</a></li>
+            <li><a href="#hero" class="hover:text-brand-turquoise transition-colors">Free IB resources</a></li>
           </ul>
         </div>
 
@@ -974,12 +975,12 @@
         <div>
           <h4 class="font-heading font-extrabold text-sm uppercase tracking-wider text-brand-dark mb-4">Account</h4>
           <ul class="space-y-2.5 text-xs font-semibold">
-            <li><a href="javascript:void(0)" onclick="openLoginModal()" class="hover:text-brand-teal transition-colors">Create an account</a></li>
-            <li><a href="javascript:void(0)" onclick="openLoginModal()" class="hover:text-brand-teal transition-colors">My account</a></li>
-            <li><a href="javascript:void(0)" onclick="openLoginModal()" class="hover:text-brand-teal transition-colors">My recorded sessions</a></li>
-            <li><a href="javascript:void(0)" onclick="showToast('Displaying privacy policy.')" class="hover:text-brand-teal transition-colors">Privacy Policy</a></li>
-            <li><a href="javascript:void(0)" onclick="showToast('Error report desk opened.')" class="hover:text-brand-teal transition-colors">Report error</a></li>
-            <li><a href="https://wa.me/201014786466" target="_blank" class="hover:text-brand-teal transition-colors">Contact me (WhatsApp)</a></li>
+            <li><a href="javascript:void(0)" onclick="openLoginModal()" class="hover:text-brand-turquoise transition-colors">Create an account</a></li>
+            <li><a href="javascript:void(0)" onclick="openLoginModal()" class="hover:text-brand-turquoise transition-colors">My account</a></li>
+            <li><a href="javascript:void(0)" onclick="openLoginModal()" class="hover:text-brand-turquoise transition-colors">My recorded sessions</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Displaying privacy policy.')" class="hover:text-brand-turquoise transition-colors">Privacy Policy</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Error report desk opened.')" class="hover:text-brand-turquoise transition-colors">Report error</a></li>
+            <li><a href="https://wa.me/201014786466" target="_blank" class="hover:text-brand-turquoise transition-colors">Contact me (WhatsApp)</a></li>
           </ul>
         </div>
 
@@ -989,7 +990,7 @@
       <div class="py-6 border-y border-slate-100 flex items-center justify-center gap-6 text-slate-400 text-lg">
         <a href="https://www.youtube.com" target="_blank" class="hover:text-rose-600 transition-colors" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
         <a href="https://wa.me/201014786466" target="_blank" class="hover:text-emerald-500 transition-colors" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="mailto:fatma.ramadan1191@yahoo.com" class="hover:text-brand-teal transition-colors" title="Email"><i class="fa-regular fa-envelope"></i></a>
+        <a href="mailto:fatma.ramadan1191@yahoo.com" class="hover:text-brand-turquoise transition-colors" title="Email"><i class="fa-regular fa-envelope"></i></a>
       </div>
 
       <!-- Copyright & Credits -->
@@ -1004,7 +1005,7 @@
   <!-- Video Modal for Watching Previews -->
   <div id="video-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl border border-brand-border">
-      <div class="bg-brand-teal text-white p-4 flex items-center justify-between">
+      <div class="bg-brand-turquoise text-white p-4 flex items-center justify-between">
         <h3 class="font-heading font-bold text-sm">Session Preview & Examiner Breakdown</h3>
         <button onclick="closeVideoModal()" class="p-1.5 rounded-lg hover:bg-white/20 text-white transition cursor-pointer">
           <i class="fa-solid fa-xmark text-lg"></i>
@@ -1040,7 +1041,7 @@
           <span>Total:</span>
           <span id="cart-total">£0.00</span>
         </div>
-        <button onclick="checkoutBasket()" class="w-full py-3.5 rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white font-heading font-bold text-sm transition cursor-pointer">
+        <button onclick="checkoutBasket()" class="w-full py-3.5 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-sm transition cursor-pointer">
           Checkout
         </button>
       </div>
@@ -1055,7 +1056,7 @@
       </button>
 
       <div class="text-center space-y-2 mb-6">
-        <div class="w-12 h-12 rounded-2xl bg-brand-teal text-white flex items-center justify-center p-2.5 mx-auto">
+        <div class="w-12 h-12 rounded-2xl bg-brand-turquoise text-white flex items-center justify-center p-2.5 mx-auto">
           <svg class="w-full h-full text-white" viewBox="0 0 600 600" fill="currentColor">
             <polygon points="300,170 510,250 300,330 90,250" />
             <path d="M 175,295 L 175,370 Q 300,440 425,370 L 425,295 Q 300,350 175,295 Z" />
@@ -1070,18 +1071,18 @@
       <form onsubmit="handleLogin(event)" class="space-y-4">
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email address</label>
-          <input type="email" required placeholder="student@example.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-teal">
+          <input type="email" required placeholder="student@example.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-turquoise">
         </div>
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Password</label>
-          <input type="password" required placeholder="••••••••" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-teal">
+          <input type="password" required placeholder="••••••••" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-turquoise">
         </div>
-        <button type="submit" class="w-full py-3 rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white font-heading font-bold text-sm transition shadow-sm cursor-pointer">
+        <button type="submit" class="w-full py-3 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-sm transition shadow-sm cursor-pointer">
           Sign In
         </button>
       </form>
       <div class="mt-4 text-center">
-        <a href="javascript:void(0)" onclick="showToast('Password reset link sent.'); closeLoginModal();" class="text-xs text-brand-teal font-semibold hover:underline">Forgot your password?</a>
+        <a href="javascript:void(0)" onclick="showToast('Password reset link sent.'); closeLoginModal();" class="text-xs text-brand-turquoise font-semibold hover:underline">Forgot your password?</a>
       </div>
     </div>
   </div>
@@ -1095,8 +1096,8 @@
 
       <div class="space-y-4">
         <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center p-2.5 border border-teal-100">
-            <svg class="w-full h-full text-brand-teal" viewBox="0 0 600 600" fill="currentColor">
+          <div class="w-12 h-12 rounded-2xl bg-brand-turquoise-light text-brand-turquoise flex items-center justify-center p-2.5 border border-brand-turquoise/20">
+            <svg class="w-full h-full text-brand-turquoise" viewBox="0 0 600 600" fill="currentColor">
               <polygon points="300,170 510,250 300,330 90,250" />
               <path d="M 175,295 L 175,370 Q 300,440 425,370 L 425,295 Q 300,350 175,295 Z" />
               <rect x="135" y="260" width="10" height="135" rx="5" />
@@ -1105,7 +1106,7 @@
           </div>
           <div>
             <h3 class="font-heading font-extrabold text-2xl text-brand-dark">Mrs. Fatma Ramadan</h3>
-            <span class="text-xs text-brand-teal font-bold uppercase">IGCSE & IB Examiner & Teacher</span>
+            <span class="text-xs text-brand-turquoise font-bold uppercase">IGCSE & IB Examiner & Teacher</span>
           </div>
         </div>
         <p class="text-sm text-slate-600 leading-relaxed">
@@ -1121,7 +1122,7 @@
   </div>
 
   <!-- Toast Notification Container -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brand-teal text-white px-5 py-3 rounded-2xl shadow-2xl text-xs font-bold transition-all transform translate-y-20 opacity-0 pointer-events-none flex items-center gap-3">
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brand-turquoise text-white px-5 py-3 rounded-2xl shadow-2xl text-xs font-bold transition-all transform translate-y-20 opacity-0 pointer-events-none flex items-center gap-3">
     <i class="fa-solid fa-circle-check text-white text-base"></i>
     <span id="toast-text">Notification</span>
   </div>
@@ -1196,7 +1197,7 @@
         total += item.price;
         const itemEl = document.createElement('div');
         itemEl.className = 'flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs';
-        itemEl.innerHTML = '<div><p class="font-bold text-brand-dark">' + item.title + '</p><p class="text-brand-teal font-extrabold mt-0.5">' + (item.price === 0 ? 'Free' : '£' + item.price.toFixed(2)) + '</p></div><button onclick="removeFromBasket(' + index + ')" class="text-slate-400 hover:text-rose-500 p-1 cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>';
+        itemEl.innerHTML = '<div><p class="font-bold text-brand-dark">' + item.title + '</p><p class="text-brand-turquoise font-extrabold mt-0.5">' + (item.price === 0 ? 'Free' : '£' + item.price.toFixed(2)) + '</p></div><button onclick="removeFromBasket(' + index + ')" class="text-slate-400 hover:text-rose-500 p-1 cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>';
         itemsContainer.appendChild(itemEl);
       });
 
