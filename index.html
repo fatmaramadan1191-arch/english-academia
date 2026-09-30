@@ -4,18 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Academia – IGCSE & IB English Tutoring | By Mrs. Fatma Ramadan</title>
-  
+
+  <!-- Google Search Favicons & App Icons -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23EDF9FA' stroke='%231BB5C4' stroke-width='3'/%3E%3Cpath d='M26 48 L26 62 C26 64 27 65 29 66 L50 78 L50 63 Z' fill='%230E7886'/%3E%3Cpath d='M50 63 L50 78 L71 66 C73 65 74 64 74 62 L74 48 L50 63 Z' fill='%231BB5C4'/%3E%3Cpolygon points='50,15 14,35 50,56' fill='%23149BA8'/%3E%3Cpolygon points='50,15 86,35 50,56' fill='%2324C9D9'/%3E%3Cpath d='M78 37 C80 43 81 48 81 50' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' fill='none'/%3E%3Cpath d='M78 50 L84 50 L85 64 C85 66 83 67 81 67 C79 67 77 66 77 64 Z' fill='%23F59E0B'/%3E%3C/svg%3E">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="/logo-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Google Search & Knowledge Graph Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "English Academia",
+    "alternateName": "Royal English Academy",
+    "url": "https://english-academia.vercel.app/",
+    "logo": "https://english-academia.vercel.app/logo-192.png",
+    "image": "https://english-academia.vercel.app/logo-192.png",
+    "description": "Specialized Cambridge Checkpoint, Pearson Edexcel IGCSE, and American Diploma EST & SAT English Tutoring by Mrs. Fatma Ramadan.",
+    "founder": {
+      "@type": "Person",
+      "name": "Mrs. Fatma Ramadan",
+      "jobTitle": "English Educator & IGCSE Specialist"
+    },
+    "sameAs": [
+      "https://wa.me/201014786466",
+      "https://www.youtube.com"
+    ]
+  }
+  </script>
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!-- Google Fonts: Outfit, Plus Jakarta Sans, Playfair Display & Cormorant Garamond -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-  
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
+
   <script>
     tailwind.config = {
       theme: {
@@ -72,17 +101,16 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Brand Logo with Mortarboard SVG -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div class="w-11 h-11 rounded-2xl bg-brand-turquoise text-white flex items-center justify-center p-2 shadow-sm group-hover:scale-105 transition-transform duration-300">
-            <svg class="w-7 h-7 text-white" viewBox="0 0 600 600" fill="currentColor">
-              <!-- Cap top diamond -->
-              <polygon points="300,170 510,250 300,330 90,250" />
-              <!-- Cap skull cap base -->
-              <path d="M 175,295 L 175,370 Q 300,440 425,370 L 425,295 Q 300,350 175,295 Z" />
-              <!-- Tassel cord and bell -->
-              <rect x="135" y="260" width="10" height="135" rx="5" />
-              <path d="M 125,395 C 120,430 110,445 140,445 C 170,445 160,430 155,395 Z" />
+        <!-- Brand Logo with 3D Mortarboard Matching Emblem -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="w-12 h-12 rounded-2xl bg-white border border-brand-border shadow-sm p-1.5 flex items-center justify-center group-hover:shadow-card-hover group-hover:scale-105 transition-all duration-300">
+            <svg class="w-9 h-9" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M26 48 L26 62 C26 64 27 65 29 66 L50 78 L50 63 Z" fill="#0E7886"/>
+              <path d="M50 63 L50 78 L71 66 C73 65 74 64 74 62 L74 48 L50 63 Z" fill="#1BB5C4"/>
+              <polygon points="50,15 14,35 50,56" fill="#149BA8"/>
+              <polygon points="50,15 86,35 50,56" fill="#24C9D9"/>
+              <path d="M78 37 C80 43 81 48 81 50" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M78 50 L84 50 L85 64 C85 66 83 67 81 67 C79 67 77 66 77 64 Z" fill="#F59E0B"/>
             </svg>
           </div>
           <div class="flex flex-col">
@@ -97,10 +125,11 @@
 
         <!-- Desktop Navigation Links -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-brand-slate">
+          <a href="#hero" class="hover:text-brand-turquoise transition-colors py-1">Direct Previews</a>
           <a href="#upcoming-classes" class="hover:text-brand-turquoise transition-colors py-1">Live Classes</a>
           <a href="#recorded-sessions" class="hover:text-brand-turquoise transition-colors py-1 font-bold text-brand-turquoise">Recorded Sessions</a>
-          <a href="#masterclass" class="hover:text-brand-turquoise transition-colors py-1">Masterclass</a>
-          <a href="#hero" class="hover:text-brand-turquoise transition-colors py-1">Previews & Resources</a>
+          <a href="#teaching-resources" class="hover:text-brand-turquoise transition-colors py-1">Teaching Resources</a>
+          <a href="#masterclass" class="hover:text-brand-turquoise transition-colors py-1">Study With Me</a>
           <a href="#blog" class="hover:text-brand-turquoise transition-colors py-1">Blog</a>
         </nav>
 
@@ -135,10 +164,11 @@
 
     <!-- Mobile Slide-down Menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-brand-border bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Direct Previews</a>
       <a href="#upcoming-classes" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Live Classes</a>
       <a href="#recorded-sessions" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-brand-turquoise">Recorded Sessions</a>
-      <a href="#masterclass" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Masterclass</a>
-      <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Previews & Resources</a>
+      <a href="#teaching-resources" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Teaching Resources</a>
+      <a href="#masterclass" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Study With Me</a>
       <a href="#blog" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Blog</a>
       <div class="pt-3 border-t border-slate-100 space-y-2">
         <a href="https://wa.me/201014786466" target="_blank" class="w-full py-2.5 rounded-xl bg-brand-turquoise text-white font-heading font-bold text-sm text-center flex items-center justify-center gap-2">
@@ -151,7 +181,7 @@
     </div>
   </header>
 
-  <!-- Hero Section with Dual Previews & PDF Downloads -->
+  <!-- Hero Section with Direct Embedded Responsive Video Players & Instant PDF Downloads -->
   <section id="hero" class="relative hero-pattern py-14 sm:py-20 border-b border-brand-border overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
@@ -175,109 +205,91 @@
         </h1>
 
         <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
-          Watch our dual preview videos below to explore methodology for Cambridge Checkpoint & Edexcel IGCSE, complete with instant PDF material downloads.
+          Watch our direct video sessions below to experience firsthand the examiner methodology for Cambridge Checkpoint & Edexcel IGCSE, complete with direct PDF material downloads.
         </p>
       </div>
 
-      <!-- Dual Preview Cards Grid -->
+      <!-- Direct Video Previews Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         
-        <!-- Preview 1: Checkpoint (0861) -->
+        <!-- Direct Preview 1: Checkpoint (0861) -->
         <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-brand-turquoise-light text-brand-turquoise uppercase tracking-wide border border-brand-border">
-                Preview 1: Checkpoint (0861)
+                Direct Preview: Checkpoint (0861)
               </span>
-              <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-brand-turquoise-light text-brand-turquoise border border-brand-border">
-                Full HD
+              <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Live Player
               </span>
             </div>
 
-            <!-- Video Player Shell -->
-            <div class="relative rounded-2xl overflow-hidden bg-gradient-to-br from-brand-turquoise-light to-slate-100 aspect-video flex items-center justify-center border-2 border-brand-turquoise/20 group-hover:border-brand-turquoise transition">
-              <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#1BB5C4_1.5px,transparent_1.5px)] [background-size:16px_16px]"></div>
-              
-              <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="relative z-20 w-16 h-16 rounded-2xl bg-brand-turquoise text-white flex items-center justify-center shadow-badge-glow hover:scale-110 hover:bg-brand-turquoise-dark transition-all duration-300 cursor-pointer" title="Play Preview">
-                <i class="fa-solid fa-play text-xl ml-0.5"></i>
-              </button>
-
-              <div class="absolute bottom-3 left-3 right-3 z-20 flex items-center justify-between text-brand-dark text-xs bg-white/90 backdrop-blur-sm p-2 rounded-xl border border-brand-border shadow-sm">
-                <div>
-                  <p class="font-bold text-xs">Lower Secondary Checkpoint English</p>
-                  <p class="text-[10px] text-brand-turquoise font-semibold">By Mrs. Fatma Ramadan</p>
-                </div>
-                <span class="bg-brand-turquoise-light text-brand-turquoise px-2 py-0.5 rounded font-bold text-[10px]">Preview</span>
-              </div>
+            <!-- Direct Embedded Video Player Shell -->
+            <div class="relative rounded-2xl overflow-hidden bg-slate-900 aspect-video shadow-md border-2 border-brand-turquoise/20 group-hover:border-brand-turquoise transition">
+              <iframe 
+                class="w-full h-full" 
+                src="https://player.vimeo.com/video/1229127932?color=1BB5C4&title=0&byline=0&portrait=0" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture" 
+                allowfullscreen 
+                title="Cambridge Checkpoint English Video Preview">
+              </iframe>
             </div>
 
             <div class="p-3 bg-brand-soft rounded-2xl border border-brand-border flex items-center justify-between text-xs">
               <span class="font-bold text-brand-dark flex items-center gap-1.5">
-                <i class="fa-solid fa-file-pdf text-brand-turquoise"></i> Sample PDF Included
+                <i class="fa-solid fa-file-pdf text-brand-turquoise"></i> Sample Model Answer
               </span>
-              <span class="text-slate-400 text-[11px]">Annotated Model Answers</span>
+              <span class="text-slate-500 font-semibold text-[11px]">Annotated Past Paper Guide</span>
             </div>
           </div>
 
-          <!-- Action Buttons -->
-          <div class="pt-5 mt-4 border-t border-slate-100 flex items-center gap-3">
-            <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="flex-1 py-3 rounded-xl bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs shadow-sm transition flex items-center justify-center gap-2 cursor-pointer">
-              <i class="fa-solid fa-play text-xs"></i>
-              <span>Watch Video</span>
-            </button>
-            <a href="https://wa.me/201014786466?text=Hello%20Mrs.%20Fatma,%20please%20send%20the%20Checkpoint%200861%20Sample%20PDF." target="_blank" class="px-4 py-3 rounded-xl border border-brand-turquoise text-brand-turquoise hover:bg-brand-turquoise-light font-heading font-bold text-xs transition flex items-center justify-center gap-1.5">
-              <i class="fa-solid fa-download"></i>
-              <span>Download PDF</span>
+          <!-- Direct Download Action -->
+          <div class="pt-5 mt-4 border-t border-slate-100">
+            <a href="/downloads/checkpoint-0861-sample.pdf" download="Cambridge_Checkpoint_0861_Sample.pdf" onclick="triggerDownload(event, 'Cambridge Checkpoint 0861 Sample PDF')" class="w-full py-3.5 rounded-xl bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs shadow-sm transition flex items-center justify-center gap-2 cursor-pointer">
+              <i class="fa-solid fa-arrow-down text-sm"></i>
+              <span>Download PDF Directly</span>
             </a>
           </div>
         </div>
 
-        <!-- Preview 2: IGCSE Literature -->
+        <!-- Direct Preview 2: IGCSE Literature -->
         <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-50 text-amber-800 uppercase tracking-wide border border-amber-200">
-                Preview 2: IGCSE Literature
+                Direct Preview: IGCSE Literature
               </span>
-              <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-amber-50 text-amber-800 border border-amber-200">
-                Full HD
+              <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Live Player
               </span>
             </div>
 
-            <!-- Video Player Shell -->
-            <div class="relative rounded-2xl overflow-hidden bg-gradient-to-br from-amber-50/60 to-slate-100 aspect-video flex items-center justify-center border-2 border-brand-turquoise/20 group-hover:border-brand-turquoise transition">
-              <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#1BB5C4_1.5px,transparent_1.5px)] [background-size:16px_16px]"></div>
-              
-              <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="relative z-20 w-16 h-16 rounded-2xl bg-brand-turquoise text-white flex items-center justify-center shadow-badge-glow hover:scale-110 hover:bg-brand-turquoise-dark transition-all duration-300 cursor-pointer" title="Play Preview">
-                <i class="fa-solid fa-play text-xl ml-0.5"></i>
-              </button>
-
-              <div class="absolute bottom-3 left-3 right-3 z-20 flex items-center justify-between text-brand-dark text-xs bg-white/90 backdrop-blur-sm p-2 rounded-xl border border-brand-border shadow-sm">
-                <div>
-                  <p class="font-bold text-xs">Edexcel IGCSE Literature (4ET1)</p>
-                  <p class="text-[10px] text-brand-turquoise font-semibold">By Mrs. Fatma Ramadan</p>
-                </div>
-                <span class="bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-bold text-[10px]">Preview</span>
-              </div>
+            <!-- Direct Embedded Video Player Shell -->
+            <div class="relative rounded-2xl overflow-hidden bg-slate-900 aspect-video shadow-md border-2 border-brand-turquoise/20 group-hover:border-brand-turquoise transition">
+              <iframe 
+                class="w-full h-full" 
+                src="https://player.vimeo.com/video/1229127932?color=1BB5C4&title=0&byline=0&portrait=0" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture" 
+                allowfullscreen 
+                title="Edexcel IGCSE Literature Video Preview">
+              </iframe>
             </div>
 
             <div class="p-3 bg-brand-soft rounded-2xl border border-brand-border flex items-center justify-between text-xs">
               <span class="font-bold text-brand-dark flex items-center gap-1.5">
-                <i class="fa-solid fa-file-pdf text-brand-turquoise"></i> Sample PDF Included
+                <i class="fa-solid fa-file-pdf text-brand-turquoise"></i> Exemplar Analysis Note
               </span>
-              <span class="text-slate-400 text-[11px]">Of Mice & Men Analysis</span>
+              <span class="text-slate-500 font-semibold text-[11px]">Of Mice & Men Grade 9 Sheet</span>
             </div>
           </div>
 
-          <!-- Action Buttons -->
-          <div class="pt-5 mt-4 border-t border-slate-100 flex items-center gap-3">
-            <button onclick="openVideoModal('https://player.vimeo.com/video/1229127932')" class="flex-1 py-3 rounded-xl bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs shadow-sm transition flex items-center justify-center gap-2 cursor-pointer">
-              <i class="fa-solid fa-play text-xs"></i>
-              <span>Watch Video</span>
-            </button>
-            <a href="https://wa.me/201014786466?text=Hello%20Mrs.%20Fatma,%20please%20send%20the%20Edexcel%20Literature%20Sample%20PDF." target="_blank" class="px-4 py-3 rounded-xl border border-brand-turquoise text-brand-turquoise hover:bg-brand-turquoise-light font-heading font-bold text-xs transition flex items-center justify-center gap-1.5">
-              <i class="fa-solid fa-download"></i>
-              <span>Download PDF</span>
+          <!-- Direct Download Action -->
+          <div class="pt-5 mt-4 border-t border-slate-100">
+            <a href="/downloads/edexcel-literature-sample.pdf" download="Edexcel_IGCSE_Literature_Sample.pdf" onclick="triggerDownload(event, 'Edexcel IGCSE Literature Sample PDF')" class="w-full py-3.5 rounded-xl bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs shadow-sm transition flex items-center justify-center gap-2 cursor-pointer">
+              <i class="fa-solid fa-arrow-down text-sm"></i>
+              <span>Download PDF Directly</span>
             </a>
           </div>
         </div>
@@ -432,8 +444,478 @@
     </div>
   </section>
 
+  <!-- Recorded Sessions Section -->
+  <section id="recorded-sessions" class="py-16 sm:py-24 bg-white border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 pb-4 border-b border-brand-border gap-4">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-turquoise">Comprehensive Self-Paced Video Library</span>
+          <h2 class="font-heading font-black text-3xl sm:text-4xl text-brand-dark mt-1">Recorded Sessions by Curriculum</h2>
+          <p class="text-slate-500 text-sm mt-1">Structured syllabus coverage, examiner criteria, and high-yield question breakdowns.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-bold text-slate-400">Filter:</span>
+          <span class="px-3 py-1 rounded-full bg-brand-turquoise-light text-brand-turquoise text-xs font-extrabold border border-brand-turquoise/20">All Curriculums</span>
+        </div>
+      </div>
+
+      <!-- 6 Curriculums Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+        <!-- 1. Cambridge Primary Checkpoint -->
+        <div class="bg-brand-soft rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-cyan-50 text-cyan-800 uppercase tracking-wide border border-cyan-200">
+                Primary Checkpoint
+              </span>
+              <span class="text-xs font-bold text-slate-500 flex items-center gap-1.5">
+                <i class="fa-regular fa-circle-play text-brand-turquoise"></i> Self-Paced
+              </span>
+            </div>
+
+            <div>
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
+                Code: 0058 / 0844
+              </span>
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
+                Cambridge Primary Checkpoint English
+              </h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Foundational reading comprehension, grammar mechanics, sentence structure variations, and guided narrative/report writing sessions.
+              </p>
+            </div>
+
+            <div class="bg-white p-3 rounded-2xl border border-slate-100 space-y-1.5 text-xs text-slate-600 font-medium">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Fiction & Non-Fiction Analysis</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Past Checkpoint Exam Walkthroughs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-200 flex items-center justify-between">
+            <span class="font-heading font-black text-brand-dark text-lg">Full Access</span>
+            <button onclick="addToBasket('Cambridge Primary Checkpoint English – Recorded Sessions', 45)" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm cursor-pointer">
+              Add to Basket
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Cambridge Lower Secondary Checkpoint -->
+        <div class="bg-brand-soft rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-teal-50 text-teal-800 uppercase tracking-wide border border-teal-200">
+                Lower Secondary
+              </span>
+              <span class="text-xs font-bold text-slate-500 flex items-center gap-1.5">
+                <i class="fa-regular fa-circle-play text-brand-turquoise"></i> Self-Paced
+              </span>
+            </div>
+
+            <div>
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
+                Syllabus 0861
+              </span>
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
+                Cambridge Lower Secondary Checkpoint (0861)
+              </h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Step-by-step methodology for Stage 7-9 analytical reading, implicit meaning extraction, formal writing formats, and examiner marking rubrics.
+              </p>
+            </div>
+
+            <div class="bg-white p-3 rounded-2xl border border-slate-100 space-y-1.5 text-xs text-slate-600 font-medium">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Paper 1 & Paper 2 Strategy Sessions</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Annotated Model Answers Included</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-200 flex items-center justify-between">
+            <span class="font-heading font-black text-brand-dark text-lg">Full Access</span>
+            <button onclick="addToBasket('Cambridge Lower Secondary Checkpoint (0861) – Recorded Sessions', 55)" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm cursor-pointer">
+              Add to Basket
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Edexcel IGCSE English Language A (4EA1) -->
+        <div class="bg-brand-soft rounded-3xl p-6 border-2 border-brand-turquoise/40 shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-50 text-amber-800 uppercase tracking-wide border border-amber-200">
+                Edexcel IGCSE
+              </span>
+              <span class="text-xs font-bold text-brand-turquoise flex items-center gap-1.5 font-heading">
+                <i class="fa-solid fa-fire"></i> Core Subject
+              </span>
+            </div>
+
+            <div>
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
+                Specification 4EA1
+              </span>
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
+                Edexcel IGCSE English Language A (4EA1)
+              </h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                In-depth master sessions on Anthology non-fiction texts (Part 1 & 2), unseen comparative reading, speech/article writing, and transactional tasks.
+              </p>
+            </div>
+
+            <div class="bg-white p-3 rounded-2xl border border-slate-100 space-y-1.5 text-xs text-slate-600 font-medium">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Paper 1 & Paper 2 Exemplar Scripts</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Grade 9 Analytical Structures</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-200 flex items-center justify-between">
+            <span class="font-heading font-black text-brand-dark text-lg">Full Access</span>
+            <button onclick="addToBasket('Edexcel IGCSE English Language A (4EA1) – Recorded Sessions', 75)" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm cursor-pointer">
+              Add to Basket
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Edexcel IGCSE English Literature (4ET1) -->
+        <div class="bg-brand-soft rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-purple-50 text-purple-800 uppercase tracking-wide border border-purple-200">
+                Edexcel IGCSE
+              </span>
+              <span class="text-xs font-bold text-slate-500 flex items-center gap-1.5">
+                <i class="fa-solid fa-book-open text-brand-turquoise"></i> Literature
+              </span>
+            </div>
+
+            <div>
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
+                Specification 4ET1
+              </span>
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
+                Edexcel IGCSE English Literature (4ET1)
+              </h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Comprehensive textual analysis for Prose, Drama, and Poetry (including Of Mice and Men, Macbeth/Romeo and Juliet, and Anthology collections).
+              </p>
+            </div>
+
+            <div class="bg-white p-3 rounded-2xl border border-slate-100 space-y-1.5 text-xs text-slate-600 font-medium">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Quote Banks & Context Analysis</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Full Mark Essay Breakdowns</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-200 flex items-center justify-between">
+            <span class="font-heading font-black text-brand-dark text-lg">Full Access</span>
+            <button onclick="addToBasket('Edexcel IGCSE English Literature (4ET1) – Recorded Sessions', 75)" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm cursor-pointer">
+              Add to Basket
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Cambridge IGCSE First Language English (0500 / 0990) -->
+        <div class="bg-brand-soft rounded-3xl p-6 border-2 border-brand-turquoise/40 shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-blue-50 text-blue-800 uppercase tracking-wide border border-blue-200">
+                Cambridge IGCSE
+              </span>
+              <span class="text-xs font-bold text-brand-turquoise flex items-center gap-1.5 font-heading">
+                <i class="fa-solid fa-star"></i> High Demand
+              </span>
+            </div>
+
+            <div>
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
+                Syllabus 0500 / 0990
+              </span>
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
+                Cambridge First Language English (0500 / 0990)
+              </h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Detailed examiner walkthroughs covering Paper 1 Reading (Comprehension, Summary Task, Writer's Effects) and Paper 2 Directed Writing & Composition.
+              </p>
+            </div>
+
+            <div class="bg-white p-3 rounded-2xl border border-slate-100 space-y-1.5 text-xs text-slate-600 font-medium">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Writer's Effect High-Yield Formulas</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Paper 1 & 2 Marked Cohort Sessions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-200 flex items-center justify-between">
+            <span class="font-heading font-black text-brand-dark text-lg">Full Access</span>
+            <button onclick="addToBasket('Cambridge First Language English (0500/0990) – Recorded Sessions', 85)" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm cursor-pointer">
+              Add to Basket
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. American Diploma EST & SAT English Preparation -->
+        <div class="bg-brand-soft rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-rose-50 text-rose-800 uppercase tracking-wide border border-rose-200">
+                American Diploma
+              </span>
+              <span class="text-xs font-bold text-slate-500 flex items-center gap-1.5">
+                <i class="fa-solid fa-bolt text-brand-amber"></i> EST & SAT
+              </span>
+            </div>
+
+            <div>
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
+                EST I & Digital SAT English
+              </span>
+              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
+                American Diploma EST & SAT English
+              </h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Strategic training for Reading & Writing modules: rhetoric analysis, transitions, standard English conventions, vocabulary in context, and time management.
+              </p>
+            </div>
+
+            <div class="bg-white p-3 rounded-2xl border border-slate-100 space-y-1.5 text-xs text-slate-600 font-medium">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Speed Reading & Evidence-Based Questions</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-turquoise text-[11px]"></i>
+                <span>Grammar & Punctuation Rules Mastery</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-200 flex items-center justify-between">
+            <span class="font-heading font-black text-brand-dark text-lg">Full Access</span>
+            <button onclick="addToBasket('American Diploma EST & SAT English – Recorded Sessions', 70)" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm cursor-pointer">
+              Add to Basket
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Teaching Resources Section (Designed as Individual Cards with Direct PDF Downloads) -->
+  <section id="teaching-resources" class="py-16 sm:py-24 bg-brand-soft border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 pb-4 border-b border-brand-border gap-4">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-turquoise">Educator & Student Material Packs</span>
+          <h2 class="font-heading font-black text-3xl sm:text-4xl text-brand-dark mt-1">Teaching & Study Resources</h2>
+          <p class="text-slate-500 text-sm mt-1">Instant printable revision booklets, teacher lesson slides, annotated exemplar scripts, and mark schemes.</p>
+        </div>
+        <button onclick="showToast('Initiating curriculum bundles download...')" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-turquoise hover:text-brand-turquoise-dark transition-colors cursor-pointer">
+          <span>Download All Packs</span>
+          <i class="fa-solid fa-download text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Resource Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Resource Card 1: Checkpoint Bundles -->
+        <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-teal-50 text-teal-800 uppercase tracking-wide border border-teal-200">
+                Checkpoint 0861 & 0058
+              </span>
+              <span class="w-8 h-8 rounded-xl bg-brand-turquoise-light text-brand-turquoise flex items-center justify-center text-sm">
+                <i class="fa-solid fa-file-pdf"></i>
+              </span>
+            </div>
+
+            <div>
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
+                Primary & Lower Sec
+              </span>
+              <h3 class="font-heading font-extrabold text-lg text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
+                Checkpoint Comprehension & Grammar Toolkit
+              </h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Extensive question banks for Stage 6 to Stage 9 students, featuring model answers and mark scheme analysis.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100 space-y-1 text-xs text-slate-600">
+              <p><i class="fa-solid fa-check text-brand-turquoise mr-1"></i> Fiction & Non-Fiction Texts</p>
+              <p><i class="fa-solid fa-check text-brand-turquoise mr-1"></i> Printable Student Worksheets</p>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+            <span class="font-heading font-black text-brand-dark text-base">Instant PDF</span>
+            <a href="/downloads/checkpoint-toolkit-pack.pdf" download="Checkpoint_Comprehension_Grammar_Toolkit.pdf" onclick="triggerDownload(event, 'Checkpoint Comprehension Toolkit')" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm flex items-center gap-1.5 cursor-pointer">
+              <i class="fa-solid fa-download"></i>
+              <span>Download PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Resource Card 2: Edexcel IGCSE Pack -->
+        <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-50 text-amber-800 uppercase tracking-wide border border-amber-200">
+                Edexcel 4EA1 & 4ET1
+              </span>
+              <span class="w-8 h-8 rounded-xl bg-amber-50 text-brand-amber flex items-center justify-center text-sm">
+                <i class="fa-solid fa-book"></i>
+              </span>
+            </div>
+
+            <div>
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
+                Language & Literature
+              </span>
+              <h3 class="font-heading font-extrabold text-lg text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
+                Anthology Guide & Grade 9 Model Essays
+              </h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Line-by-line literary analysis, quote banks, and comparative frameworks for Part 1/2 Anthology and Literature drama texts.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100 space-y-1 text-xs text-slate-600">
+              <p><i class="fa-solid fa-check text-brand-turquoise mr-1"></i> Full Prose & Poetry Analysis</p>
+              <p><i class="fa-solid fa-check text-brand-turquoise mr-1"></i> PEEEL Writing Templates</p>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+            <span class="font-heading font-black text-brand-dark text-base">Instant PDF</span>
+            <a href="/downloads/edexcel-anthology-guide.pdf" download="Edexcel_Anthology_Grade9_Essays.pdf" onclick="triggerDownload(event, 'Edexcel Anthology Guide')" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm flex items-center gap-1.5 cursor-pointer">
+              <i class="fa-solid fa-download"></i>
+              <span>Download PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Resource Card 3: Cambridge 0500/0990 Pack -->
+        <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-blue-50 text-blue-800 uppercase tracking-wide border border-blue-200">
+                Cambridge 0500/0990
+              </span>
+              <span class="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-sm">
+                <i class="fa-solid fa-feather-pointed"></i>
+              </span>
+            </div>
+
+            <div>
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
+                Paper 1 & Paper 2
+              </span>
+              <h3 class="font-heading font-extrabold text-lg text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
+                Examiner Writing & Summary Master Pack
+              </h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Step-by-step schemes for Writer's Effects, 15-mark Summary strategies, speeches, formal letters, and high-scoring narratives.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100 space-y-1 text-xs text-slate-600">
+              <p><i class="fa-solid fa-check text-brand-turquoise mr-1"></i> Annotated Examiner Rubrics</p>
+              <p><i class="fa-solid fa-check text-brand-turquoise mr-1"></i> 50+ High Band Exemplars</p>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+            <span class="font-heading font-black text-brand-dark text-base">Instant PDF</span>
+            <a href="/downloads/cambridge-0500-master-pack.pdf" download="Cambridge_0500_Summary_Writing_Pack.pdf" onclick="triggerDownload(event, 'Cambridge 0500 Writing Pack')" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm flex items-center gap-1.5 cursor-pointer">
+              <i class="fa-solid fa-download"></i>
+              <span>Download PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Resource Card 4: American Diploma EST/SAT Pack -->
+        <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover hover:border-brand-turquoise transition duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-rose-50 text-rose-800 uppercase tracking-wide border border-rose-200">
+                EST & Digital SAT
+              </span>
+              <span class="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-sm">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </span>
+            </div>
+
+            <div>
+              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
+                Reading & Writing
+              </span>
+              <h3 class="font-heading font-extrabold text-lg text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
+                American Diploma Grammar & Rhetoric Drill Pack
+              </h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Rules formula cards for punctuation, transition words, logical consistency, and speed reading strategies for EST I & SAT.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100 space-y-1 text-xs text-slate-600">
+              <p><i class="fa-solid fa-check text-brand-turquoise mr-1"></i> Grammar Rule Breakdown Cards</p>
+              <p><i class="fa-solid fa-check text-brand-turquoise mr-1"></i> Timed Practice Drill Sheets</p>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+            <span class="font-heading font-black text-brand-dark text-base">Instant PDF</span>
+            <a href="/downloads/est-sat-grammar-drill-pack.pdf" download="American_Diploma_EST_SAT_Grammar_Pack.pdf" onclick="triggerDownload(event, 'EST & SAT Grammar Drill Pack')" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm flex items-center gap-1.5 cursor-pointer">
+              <i class="fa-solid fa-download"></i>
+              <span>Download PDF</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- Study With Me Section -->
-  <section id="masterclass" class="py-16 sm:py-24 bg-brand-soft border-b border-brand-border">
+  <section id="masterclass" class="py-16 sm:py-24 bg-white border-b border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
@@ -446,23 +928,23 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Pillar 1: Group Class -->
-        <div class="bg-white rounded-3xl p-8 border border-brand-border shadow-card-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+        <div class="bg-brand-soft rounded-3xl p-8 border border-brand-border shadow-card-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
             <div class="w-14 h-14 rounded-2xl bg-brand-turquoise-light text-brand-turquoise flex items-center justify-center text-2xl group-hover:bg-brand-turquoise group-hover:text-white transition-colors duration-300">
               <i class="fa-solid fa-users"></i>
             </div>
             <h3 class="font-heading font-extrabold text-2xl text-brand-dark">Group class</h3>
             <p class="text-slate-600 text-sm leading-relaxed">
-              Study live with me in weekly sessions designed to support students sitting IGCSE First Language English 0500/0990.
+              Study live with me in weekly sessions designed to support students sitting IGCSE First Language English 0500/0990 and Checkpoint.
             </p>
           </div>
 
-          <div class="pt-8 mt-6 border-t border-slate-100 flex items-center justify-between">
+          <div class="pt-8 mt-6 border-t border-slate-200 flex items-center justify-between">
             <div>
               <span class="text-xs font-semibold text-slate-400 block uppercase">Tuition Rate</span>
               <span class="font-heading font-black text-xl text-brand-dark">From £40/hour</span>
             </div>
-            <button onclick="handleEnrollClass('Weekly Group Class (0500/0990)')" class="px-5 py-2.5 rounded-full bg-slate-100 hover:bg-brand-turquoise hover:text-white text-brand-dark font-heading font-bold text-xs transition-colors cursor-pointer">
+            <button onclick="handleEnrollClass('Weekly Group Class (0500/0990)')" class="px-5 py-2.5 rounded-full bg-white hover:bg-brand-turquoise hover:text-white text-brand-dark border border-slate-200 font-heading font-bold text-xs transition-colors cursor-pointer">
               Book Seat
             </button>
           </div>
@@ -496,207 +978,28 @@
         </div>
 
         <!-- Pillar 3: Recorded Sessions Self-Study -->
-        <div class="bg-white rounded-3xl p-8 border border-brand-border shadow-card-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+        <div class="bg-brand-soft rounded-3xl p-8 border border-brand-border shadow-card-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
             <div class="w-14 h-14 rounded-2xl bg-brand-turquoise-light text-brand-turquoise flex items-center justify-center text-2xl group-hover:bg-brand-turquoise group-hover:text-white transition-colors duration-300">
               <i class="fa-solid fa-circle-play"></i>
             </div>
             <h3 class="font-heading font-extrabold text-2xl text-brand-dark">Recorded Sessions</h3>
             <p class="text-slate-600 text-sm leading-relaxed">
-              Study at your own pace with high-yield recorded sessions, annotated model answers, and examiner rubrics for IGCSE and IB English.
+              Study at your own pace with high-yield recorded sessions, annotated model answers, and examiner rubrics across all major exam boards.
             </p>
           </div>
 
-          <div class="pt-8 mt-6 border-t border-slate-100 flex items-center justify-between">
+          <div class="pt-8 mt-6 border-t border-slate-200 flex items-center justify-between">
             <div>
               <span class="text-xs font-semibold text-slate-400 block uppercase">Tuition Rate</span>
               <span class="font-heading font-black text-xl text-brand-dark">From £0/hour</span>
             </div>
-            <a href="#recorded-sessions" class="px-5 py-2.5 rounded-full bg-slate-100 hover:bg-brand-turquoise hover:text-white text-brand-dark font-heading font-bold text-xs transition-colors">
+            <a href="#recorded-sessions" class="px-5 py-2.5 rounded-full bg-white hover:bg-brand-turquoise hover:text-white text-brand-dark border border-slate-200 font-heading font-bold text-xs transition-colors">
               Explore
             </a>
           </div>
         </div>
 
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Recorded Sessions Section (Previously Courses) -->
-  <section id="recorded-sessions" class="py-16 sm:py-24 bg-white border-b border-brand-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Title -->
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-4 border-b border-brand-border gap-4">
-        <div>
-          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-turquoise">Self-Paced Curriculum</span>
-          <h2 class="font-heading font-black text-3xl sm:text-4xl text-brand-dark mt-1">My latest recorded sessions</h2>
-        </div>
-        <a href="#recorded-sessions" class="inline-flex items-center gap-2 font-heading font-bold text-sm text-brand-turquoise hover:text-brand-turquoise-dark transition-colors">
-          <span>See all</span>
-          <i class="fa-solid fa-arrow-right text-xs"></i>
-        </a>
-      </div>
-
-      <!-- Latest Recorded Sessions Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-
-        <!-- Recorded Session 1 -->
-        <div class="bg-brand-soft rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover transition duration-300 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-100 text-amber-900 uppercase tracking-wide">
-                Premium
-              </span>
-              <span class="text-xs font-bold text-slate-500 flex items-center gap-1.5">
-                <i class="fa-regular fa-clock text-brand-turquoise"></i> Time: 9 weeks
-              </span>
-            </div>
-
-            <div>
-              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
-                Featured &bull; First Language English IGCSE
-              </span>
-              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
-                First Language English IGCSE Masterclass – Recorded Sessions
-              </h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Full video library access of all previous masterclass cohorts, including annotated exemplar scripts and mark schemes.
-              </p>
-            </div>
-          </div>
-
-          <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
-            <span class="font-heading font-black text-brand-dark text-lg">£85.00</span>
-            <button onclick="addToBasket('First Language English IGCSE Masterclass – Recorded Sessions', 85)" class="px-4 py-2 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-xs transition shadow-sm cursor-pointer">
-              Add to Basket
-            </button>
-          </div>
-        </div>
-
-        <!-- Recorded Session 2 -->
-        <div class="bg-brand-soft rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover transition duration-300 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full text-xs font-black bg-emerald-100 text-emerald-800 uppercase tracking-wide">
-                Free
-              </span>
-              <span class="text-xs font-bold text-slate-500 flex items-center gap-1.5">
-                <i class="fa-regular fa-clock text-brand-turquoise"></i> Time: 1 hour
-              </span>
-            </div>
-
-            <div>
-              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
-                First Language English - Paper 2 Writing
-              </span>
-              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
-                Directed Writing for IGCSE First Language English (Recorded)
-              </h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Step-by-step guidance on transforming evaluation points into high-scoring speeches, articles, and formal letters.
-              </p>
-            </div>
-          </div>
-
-          <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
-            <span class="font-heading font-black text-emerald-600 text-lg">Free</span>
-            <button onclick="addToBasket('Directed Writing for IGCSE First Language English', 0)" class="px-4 py-2 rounded-full bg-white hover:bg-brand-turquoise hover:text-white text-brand-turquoise border border-brand-turquoise font-heading font-bold text-xs transition cursor-pointer">
-              Start Free
-            </button>
-          </div>
-        </div>
-
-        <!-- Recorded Session 3 -->
-        <div class="bg-brand-soft rounded-3xl p-6 border border-brand-border shadow-card-subtle hover:shadow-card-hover transition duration-300 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full text-xs font-black bg-emerald-100 text-emerald-800 uppercase tracking-wide">
-                Free
-              </span>
-              <span class="text-xs font-bold text-slate-500 flex items-center gap-1.5">
-                <i class="fa-regular fa-clock text-brand-turquoise"></i> Time: 45 minutes
-              </span>
-            </div>
-
-            <div>
-              <span class="inline-block text-[11px] font-black uppercase text-brand-turquoise bg-brand-turquoise-light px-2.5 py-0.5 rounded-md mb-2">
-                First Language English - Paper 1 Reading
-              </span>
-              <h3 class="font-heading font-extrabold text-xl text-brand-dark group-hover:text-brand-turquoise transition-colors leading-snug">
-                Formal Report Writing for IGCSE First Language English (Recorded)
-              </h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Examiner's breakdown of concise syntactic registers, professional headings, and objective factual presentation.
-              </p>
-            </div>
-          </div>
-
-          <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
-            <span class="font-heading font-black text-emerald-600 text-lg">Free</span>
-            <button onclick="addToBasket('Formal Report Writing for IGCSE First Language English', 0)" class="px-4 py-2 rounded-full bg-white hover:bg-brand-turquoise hover:text-white text-brand-turquoise border border-brand-turquoise font-heading font-bold text-xs transition cursor-pointer">
-              Start Free
-            </button>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Featured Recorded Sessions Sub-Header & 2 Cards -->
-      <div class="pt-6">
-        <h3 class="font-heading font-extrabold text-2xl text-brand-dark mb-6 flex items-center gap-2">
-          <span>Featured Recorded Sessions</span>
-          <span class="w-2 h-2 rounded-full bg-brand-turquoise"></span>
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <!-- Featured Card 1 -->
-          <div class="bg-gradient-to-br from-brand-turquoise-light to-white rounded-3xl p-8 border-2 border-brand-turquoise shadow-card-subtle flex flex-col justify-between group">
-            <div class="space-y-3">
-              <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-100 text-amber-900 uppercase tracking-wide inline-block">
-                Premium
-              </span>
-              <h4 class="font-heading font-extrabold text-2xl text-brand-dark group-hover:text-brand-turquoise transition-colors">
-                First Language English IGCSE Masterclass – Recorded Sessions
-              </h4>
-              <p class="text-sm text-slate-600 leading-relaxed">
-                The comprehensive examiner masterclass package with full access to recorded workshops, mark schemes, model essays, and syllabus notes.
-              </p>
-            </div>
-            <div class="pt-6 mt-6 border-t border-brand-turquoise/20 flex items-center justify-between">
-              <span class="text-xs font-bold text-brand-turquoise uppercase tracking-wider">Updated for 2027</span>
-              <button onclick="openCoursePreview('First Language English IGCSE Masterclass – Recorded Sessions')" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-sm transition cursor-pointer">
-                <span>Learn more</span>
-                <i class="fa-solid fa-arrow-right text-xs"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Featured Card 2 -->
-          <div class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 border border-brand-border shadow-card-subtle flex flex-col justify-between group hover:border-brand-turquoise transition">
-            <div class="space-y-3">
-              <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-100 text-amber-900 uppercase tracking-wide inline-block">
-                Premium
-              </span>
-              <h4 class="font-heading font-extrabold text-2xl text-brand-dark group-hover:text-brand-turquoise transition-colors">
-                First Language English IGCSE – Paper 2 – Premium Writing Recorded Sessions
-              </h4>
-              <p class="text-sm text-slate-600 leading-relaxed">
-                Master descriptive and narrative techniques, varied sentence structures, sensory imagery, and directed analytical response writing.
-              </p>
-            </div>
-            <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
-              <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Exam Board Aligned</span>
-              <button onclick="openCoursePreview('First Language English IGCSE – Paper 2 – Premium Writing Recorded Sessions')" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-sm transition cursor-pointer">
-                <span>Learn more</span>
-                <i class="fa-solid fa-arrow-right text-xs"></i>
-              </button>
-            </div>
-          </div>
-
-        </div>
       </div>
 
     </div>
@@ -782,17 +1085,19 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Experience Graphic (Light Gradient with Mortarboard SVG) -->
+        <!-- Experience Graphic (Light Gradient with 3D Mortarboard Matching Emblem) -->
         <div class="lg:col-span-5 flex justify-center">
           <div class="relative w-72 sm:w-80 h-72 sm:h-80 bg-gradient-to-tr from-brand-turquoise to-brand-turquoise-dark rounded-3xl p-8 shadow-card-hover flex flex-col justify-between text-white overflow-hidden">
             <div class="absolute -right-6 -bottom-6 w-40 h-40 bg-white/20 rounded-full blur-2xl"></div>
             
-            <div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center p-2.5">
-              <svg class="w-full h-full text-white" viewBox="0 0 600 600" fill="currentColor">
-                <polygon points="300,170 510,250 300,330 90,250" />
-                <path d="M 175,295 L 175,370 Q 300,440 425,370 L 425,295 Q 300,350 175,295 Z" />
-                <rect x="135" y="260" width="10" height="135" rx="5" />
-                <path d="M 125,395 C 120,430 110,445 140,445 C 170,445 160,430 155,395 Z" />
+            <div class="w-16 h-16 rounded-2xl bg-white/90 backdrop-blur-sm flex items-center justify-center p-2 shadow-sm">
+              <svg class="w-11 h-11" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26 48 L26 62 C26 64 27 65 29 66 L50 78 L50 63 Z" fill="#0E7886"/>
+                <path d="M50 63 L50 78 L71 66 C73 65 74 64 74 62 L74 48 L50 63 Z" fill="#1BB5C4"/>
+                <polygon points="50,15 14,35 50,56" fill="#149BA8"/>
+                <polygon points="50,15 86,35 50,56" fill="#24C9D9"/>
+                <path d="M78 37 C80 43 81 48 81 50" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M78 50 L84 50 L85 64 C85 66 83 67 81 67 C79 67 77 66 77 64 Z" fill="#F59E0B"/>
               </svg>
             </div>
 
@@ -839,23 +1144,26 @@
   </section>
 
   <!-- YouTube Promotion Banner -->
-  <section class="py-12 bg-rose-600 text-white relative overflow-hidden">
+  <section class="py-12 bg-brand-dark text-white relative overflow-hidden border-y border-slate-800">
+    <div class="absolute -right-20 -top-20 w-80 h-80 bg-brand-turquoise/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-rose-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
       
       <div class="flex items-center gap-5 text-center md:text-left">
-        <div class="w-16 h-16 rounded-2xl bg-white text-rose-600 flex items-center justify-center text-3xl shrink-0 shadow-sm mx-auto md:mx-0">
+        <div class="w-16 h-16 rounded-2xl bg-slate-800/80 border border-slate-700 text-rose-500 flex items-center justify-center text-3xl shrink-0 shadow-lg mx-auto md:mx-0">
           <i class="fa-brands fa-youtube"></i>
         </div>
         <div>
-          <span class="text-xs uppercase font-extrabold tracking-widest text-rose-200 block">YouTube</span>
-          <h3 class="font-heading font-extrabold text-xl sm:text-2xl mt-0.5">
-            Subscribe to my YouTube channel today and access free lessons!
+          <span class="text-xs uppercase font-extrabold tracking-widest text-brand-turquoise block">Free Video Masterclasses</span>
+          <h3 class="font-heading font-extrabold text-xl sm:text-2xl mt-0.5 text-white">
+            Subscribe to our YouTube channel and access comprehensive free walkthroughs!
           </h3>
         </div>
       </div>
 
-      <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="shrink-0 px-8 py-3.5 rounded-full bg-white hover:bg-rose-50 text-rose-600 font-heading font-black text-sm tracking-wide shadow-md transition duration-200 flex items-center gap-2">
-        <i class="fa-brands fa-youtube text-lg"></i>
+      <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="shrink-0 px-8 py-3.5 rounded-full bg-white hover:bg-slate-100 text-brand-dark font-heading font-extrabold text-sm tracking-wide shadow-md transition duration-200 flex items-center gap-3 group">
+        <i class="fa-brands fa-youtube text-rose-600 text-xl group-hover:scale-110 transition-transform"></i>
         <span>English Academia on YouTube</span>
       </a>
 
@@ -907,7 +1215,7 @@
               A* Description: The Castle by Cyrus
             </h3>
             <p class="text-slate-600 text-sm leading-relaxed font-serif">
-              agged precipices enveloped the crumbling castle, with crimson red streams flowing through the valley. The Earth shook in fear of the impending doom, bringing several towers down with it. The castle stood out amongst the destruction, just barely having survived the first round of obliteration. Galloping sounds neared the castle, where knights once trained, but now, where they slept, forever.
+              Jagged precipices enveloped the crumbling castle, with crimson red streams flowing through the valley. The Earth shook in fear of the impending doom, bringing several towers down with it. The castle stood out amongst the destruction, just barely having survived the first round of obliteration. Galloping sounds neared the castle, where knights once trained, but now, where they slept, forever.
             </p>
           </div>
           
@@ -957,8 +1265,11 @@
         <div>
           <h4 class="font-heading font-extrabold text-sm uppercase tracking-wider text-brand-dark mb-4">Students</h4>
           <ul class="space-y-2.5 text-xs font-semibold">
-            <li><a href="#recorded-sessions" class="hover:text-brand-turquoise transition-colors">IGCSE English</a></li>
-            <li><a href="#recorded-sessions" class="hover:text-brand-turquoise transition-colors">IB English A</a></li>
+            <li><a href="#recorded-sessions" class="hover:text-brand-turquoise transition-colors">Primary Checkpoint</a></li>
+            <li><a href="#recorded-sessions" class="hover:text-brand-turquoise transition-colors">Lower Secondary Checkpoint</a></li>
+            <li><a href="#recorded-sessions" class="hover:text-brand-turquoise transition-colors">Edexcel IGCSE (4EA1/4ET1)</a></li>
+            <li><a href="#recorded-sessions" class="hover:text-brand-turquoise transition-colors">Cambridge IGCSE (0500/0990)</a></li>
+            <li><a href="#recorded-sessions" class="hover:text-brand-turquoise transition-colors">American Diploma EST/SAT</a></li>
           </ul>
         </div>
 
@@ -966,8 +1277,9 @@
         <div>
           <h4 class="font-heading font-extrabold text-sm uppercase tracking-wider text-brand-dark mb-4">Teachers</h4>
           <ul class="space-y-2.5 text-xs font-semibold">
-            <li><a href="#hero" class="hover:text-brand-turquoise transition-colors">Free IGCSE resources</a></li>
-            <li><a href="#hero" class="hover:text-brand-turquoise transition-colors">Free IB resources</a></li>
+            <li><a href="#teaching-resources" class="hover:text-brand-turquoise transition-colors">Teaching Resources Hub</a></li>
+            <li><a href="#hero" class="hover:text-brand-turquoise transition-colors">Free Checkpoint Samples</a></li>
+            <li><a href="#hero" class="hover:text-brand-turquoise transition-colors">Free Literature Models</a></li>
           </ul>
         </div>
 
@@ -1001,21 +1313,6 @@
 
     </div>
   </footer>
-
-  <!-- Video Modal for Watching Previews -->
-  <div id="video-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl border border-brand-border">
-      <div class="bg-brand-turquoise text-white p-4 flex items-center justify-between">
-        <h3 class="font-heading font-bold text-sm">Session Preview & Examiner Breakdown</h3>
-        <button onclick="closeVideoModal()" class="p-1.5 rounded-lg hover:bg-white/20 text-white transition cursor-pointer">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-      <div class="p-2 bg-slate-100 aspect-video">
-        <iframe id="preview-video-frame" class="w-full h-full" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
 
   <!-- Basket / Cart Drawer Modal -->
   <div id="cart-modal" class="fixed inset-0 z-50 hidden bg-slate-900/40 backdrop-blur-sm flex justify-end">
@@ -1056,12 +1353,14 @@
       </button>
 
       <div class="text-center space-y-2 mb-6">
-        <div class="w-12 h-12 rounded-2xl bg-brand-turquoise text-white flex items-center justify-center p-2.5 mx-auto">
-          <svg class="w-full h-full text-white" viewBox="0 0 600 600" fill="currentColor">
-            <polygon points="300,170 510,250 300,330 90,250" />
-            <path d="M 175,295 L 175,370 Q 300,440 425,370 L 425,295 Q 300,350 175,295 Z" />
-            <rect x="135" y="260" width="10" height="135" rx="5" />
-            <path d="M 125,395 C 120,430 110,445 140,445 C 170,445 160,430 155,395 Z" />
+        <div class="w-14 h-14 rounded-2xl bg-white border border-brand-border shadow-sm flex items-center justify-center p-2 mx-auto">
+          <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26 48 L26 62 C26 64 27 65 29 66 L50 78 L50 63 Z" fill="#0E7886"/>
+            <path d="M50 63 L50 78 L71 66 C73 65 74 64 74 62 L74 48 L50 63 Z" fill="#1BB5C4"/>
+            <polygon points="50,15 14,35 50,56" fill="#149BA8"/>
+            <polygon points="50,15 86,35 50,56" fill="#24C9D9"/>
+            <path d="M78 37 C80 43 81 48 81 50" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M78 50 L84 50 L85 64 C85 66 83 67 81 67 C79 67 77 66 77 64 Z" fill="#F59E0B"/>
           </svg>
         </div>
         <h3 class="font-heading font-extrabold text-2xl text-brand-dark">Account Login</h3>
@@ -1096,12 +1395,14 @@
 
       <div class="space-y-4">
         <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-2xl bg-brand-turquoise-light text-brand-turquoise flex items-center justify-center p-2.5 border border-brand-turquoise/20">
-            <svg class="w-full h-full text-brand-turquoise" viewBox="0 0 600 600" fill="currentColor">
-              <polygon points="300,170 510,250 300,330 90,250" />
-              <path d="M 175,295 L 175,370 Q 300,440 425,370 L 425,295 Q 300,350 175,295 Z" />
-              <rect x="135" y="260" width="10" height="135" rx="5" />
-              <path d="M 125,395 C 120,430 110,445 140,445 C 170,445 160,430 155,395 Z" />
+          <div class="w-14 h-14 rounded-2xl bg-white border border-brand-border shadow-sm flex items-center justify-center p-2">
+            <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M26 48 L26 62 C26 64 27 65 29 66 L50 78 L50 63 Z" fill="#0E7886"/>
+              <path d="M50 63 L50 78 L71 66 C73 65 74 64 74 62 L74 48 L50 63 Z" fill="#1BB5C4"/>
+              <polygon points="50,15 14,35 50,56" fill="#149BA8"/>
+              <polygon points="50,15 86,35 50,56" fill="#24C9D9"/>
+              <path d="M78 37 C80 43 81 48 81 50" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M78 50 L84 50 L85 64 C85 66 83 67 81 67 C79 67 77 66 77 64 Z" fill="#F59E0B"/>
             </svg>
           </div>
           <div>
@@ -1133,42 +1434,36 @@
 
     function toggleMobileMenu() {
       const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
+      if (menu) menu.classList.toggle('hidden');
     }
 
     function toggleCartModal() {
       const modal = document.getElementById('cart-modal');
-      modal.classList.toggle('hidden');
+      if (modal) modal.classList.toggle('hidden');
     }
 
     function openLoginModal() {
-      document.getElementById('login-modal').classList.remove('hidden');
+      const modal = document.getElementById('login-modal');
+      if (modal) modal.classList.remove('hidden');
     }
 
     function closeLoginModal() {
-      document.getElementById('login-modal').classList.add('hidden');
+      const modal = document.getElementById('login-modal');
+      if (modal) modal.classList.add('hidden');
     }
 
     function openBioModal() {
-      document.getElementById('bio-modal').classList.remove('hidden');
+      const modal = document.getElementById('bio-modal');
+      if (modal) modal.classList.remove('hidden');
     }
 
     function closeBioModal() {
-      document.getElementById('bio-modal').classList.add('hidden');
+      const modal = document.getElementById('bio-modal');
+      if (modal) modal.classList.add('hidden');
     }
 
-    function openVideoModal(url) {
-      const modal = document.getElementById('video-modal');
-      const frame = document.getElementById('preview-video-frame');
-      frame.src = url + '?autoplay=1';
-      modal.classList.remove('hidden');
-    }
-
-    function closeVideoModal() {
-      const modal = document.getElementById('video-modal');
-      const frame = document.getElementById('preview-video-frame');
-      frame.src = '';
-      modal.classList.add('hidden');
+    function triggerDownload(e, resourceName) {
+      showToast('Downloading ' + resourceName + '...');
     }
 
     function addToBasket(title, price) {
@@ -1182,7 +1477,8 @@
       const itemsContainer = document.getElementById('cart-items');
       const totalSpan = document.getElementById('cart-total');
 
-      counter.innerText = cart.length;
+      if (counter) counter.innerText = cart.length;
+      if (!itemsContainer || !totalSpan) return;
 
       if (cart.length === 0) {
         itemsContainer.innerHTML = '<div class="text-center py-8 text-slate-400 text-sm"><i class="fa-solid fa-basket-shopping text-3xl mb-2 text-slate-300"></i><p>Your basket is currently empty.</p></div>';
@@ -1232,14 +1528,6 @@
       }, 500);
     }
 
-    function openCoursePreview(courseName) {
-      showToast('Opening session: ' + courseName);
-      setTimeout(() => {
-        addToBasket(courseName, 85);
-        toggleCartModal();
-      }, 400);
-    }
-
     function handleLogin(e) {
       e.preventDefault();
       closeLoginModal();
@@ -1249,6 +1537,8 @@
     function showToast(msg) {
       const toast = document.getElementById('toast');
       const text = document.getElementById('toast-text');
+      if (!toast || !text) return;
+
       text.innerText = msg;
       toast.classList.remove('translate-y-20', 'opacity-0');
       toast.classList.add('translate-y-0', 'opacity-100');
