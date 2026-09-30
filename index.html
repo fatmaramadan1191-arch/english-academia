@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Royal English Academy – Cambridge, IGCSE & IB English | By Mrs. Fatma Ramadan</title>
 
-  <!-- Google Search Favicon: Enlarged Turquoise Cap inside Soft Squircle Badge -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%23EDF9FA' stroke='%231BB5C4' stroke-width='4.5' stroke-opacity='0.45'/%3E%3Cpath d='M50 17 L89 32 L50 47 L11 32 Z' fill='%231BB5C4'/%3E%3Cpath d='M25 45.5 L25 64.5 C25 74.5 75 74.5 75 64.5 L75 45.5 C68 50.5 59 52.5 50 52.5 C41 52.5 32 50.5 25 45.5 Z' fill='%231BB5C4'/%3E%3Cpath d='M19 35 C17.5 43 14.5 55 12 64.5 C15 65.5 20.5 65.5 23 64.5 C20.5 55 20.5 43 20.5 37' fill='%231BB5C4'/%3E%3C/svg%3E">
 
   <!-- Tailwind CSS -->
@@ -69,7 +69,7 @@
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-brand-turquoise-dark selection:text-white">
 
-  <!-- Header / Navigation -->
+  <!-- Header / Navigation (تم حذف أزرار السوشيال من هنا وتركها بالفوتر) -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20 gap-4">
@@ -100,21 +100,25 @@
           <a href="#about" class="hover:text-brand-turquoise transition-colors py-1">About</a>
         </nav>
 
-        <!-- Right Actions -->
+        <!-- Right Actions: Basket, WhatsApp & Login -->
         <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+          <!-- Shopping Basket Button -->
           <button onclick="toggleCartModal()" class="relative p-2 text-brand-slate hover:text-brand-turquoise transition-colors cursor-pointer" title="View Basket" aria-label="Cart">
             <i class="fa-solid fa-basket-shopping text-xl"></i>
             <span id="cart-counter" class="absolute -top-1 -right-1 w-5 h-5 bg-brand-turquoise text-white rounded-full text-xs font-bold flex items-center justify-center border-2 border-white shadow-sm">0</span>
           </button>
 
+          <!-- WhatsApp Desk -->
           <a href="https://wa.me/201014786466" target="_blank" class="w-10 h-10 rounded-full bg-brand-turquoise-light hover:bg-brand-turquoise text-brand-turquoise hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm" title="Chat on WhatsApp">
             <i class="fa-brands fa-whatsapp text-lg"></i>
           </a>
 
+          <!-- Login Trigger -->
           <button onclick="openLoginModal()" class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full border-2 border-brand-turquoise text-brand-turquoise font-heading font-bold text-sm hover:bg-brand-turquoise hover:text-white transition-all duration-200 cursor-pointer">
             Login
           </button>
 
+          <!-- Mobile Menu Trigger -->
           <button onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-lg text-brand-slate hover:bg-slate-50 cursor-pointer" aria-label="Open Navigation Menu">
             <i class="fa-solid fa-bars text-xl"></i>
           </button>
@@ -130,9 +134,10 @@
       <a href="#free-hub" onclick="toggleMobileMenu()" class="block py-2 text-base font-bold text-emerald-600 hover:text-emerald-700">Free Hub (Videos & PDFs)</a>
       <a href="#masterclass" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">Study With Me</a>
       <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-brand-slate hover:text-brand-turquoise">About Your Teacher</a>
+      
       <div class="pt-3 border-t border-slate-100 space-y-2">
         <a href="https://wa.me/201014786466" target="_blank" class="w-full py-2.5 rounded-xl bg-brand-turquoise text-white font-heading font-bold text-sm text-center flex items-center justify-center gap-2">
-          <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Desk
+          <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Desk (+20 101 478 6466)
         </a>
       </div>
     </div>
@@ -148,9 +153,9 @@
         </span>
       </div>
 
-      <h1 class="font-heading font-extrabold text-3xl sm:text-5xl text-brand-dark tracking-tight leading-[1.2] max-w-4xl mx-auto">
-        Achieve Academic Distinction In English With <br>
-        <span class="text-brand-turquoise relative inline-block">
+      <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl text-brand-dark tracking-tight leading-[1.2] max-w-4xl mx-auto">
+        Master English Language &amp; Literature With <br>
+        <span class="text-brand-turquoise relative inline-block mt-2">
           Mrs. Fatma Ramadan
           <svg class="absolute -bottom-2 left-0 w-full h-3 text-brand-amber opacity-80" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none">
             <path d="M2 9C58 2 142 2 198 9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
@@ -159,14 +164,14 @@
       </h1>
 
       <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
-        Access premium recorded sessions, curriculum-aligned teaching resources, and complimentary student guides built with proven examiner methodology.
+        Structured video masterclasses, curriculum-aligned lesson packs, and complimentary student revision guides built with proven examiner methodology.
       </p>
 
       <div class="pt-3 flex flex-wrap justify-center gap-4">
-        <a href="#recorded-sessions" class="px-7 py-3 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-sm shadow-md transition">
+        <a href="#recorded-sessions" class="px-7 py-3.5 rounded-full bg-brand-turquoise hover:bg-brand-turquoise-dark text-white font-heading font-bold text-sm shadow-md transition">
           Browse Video Courses
         </a>
-        <a href="#free-hub" class="px-7 py-3 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-300 hover:bg-emerald-100 font-heading font-bold text-sm transition flex items-center gap-2">
+        <a href="#free-hub" class="px-7 py-3.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-300 hover:bg-emerald-100 font-heading font-bold text-sm transition flex items-center gap-2">
           <i class="fa-solid fa-gift"></i> Free Resources & Videos
         </a>
       </div>
@@ -216,7 +221,6 @@
               </p>
             </div>
 
-            <!-- Course Index Details -->
             <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 space-y-2">
               <span class="text-[11px] font-black uppercase tracking-wider text-slate-400 block border-b border-slate-100 pb-1">
                 Course Video Index:
@@ -265,7 +269,6 @@
               </p>
             </div>
 
-            <!-- Course Index Details -->
             <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 space-y-2">
               <span class="text-[11px] font-black uppercase tracking-wider text-slate-400 block border-b border-slate-100 pb-1">
                 Course Video Index:
@@ -314,7 +317,6 @@
               </p>
             </div>
 
-            <!-- Course Index Details -->
             <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 space-y-2">
               <span class="text-[11px] font-black uppercase tracking-wider text-slate-400 block border-b border-slate-100 pb-1">
                 Course Video Index:
@@ -363,7 +365,6 @@
               </p>
             </div>
 
-            <!-- Course Index Details -->
             <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 space-y-2">
               <span class="text-[11px] font-black uppercase tracking-wider text-slate-400 block border-b border-slate-100 pb-1">
                 Course Video Index:
@@ -412,7 +413,6 @@
               </p>
             </div>
 
-            <!-- Course Index Details -->
             <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 space-y-2">
               <span class="text-[11px] font-black uppercase tracking-wider text-slate-400 block border-b border-slate-100 pb-1">
                 Course Video Index:
@@ -461,7 +461,6 @@
               </p>
             </div>
 
-            <!-- Course Index Details -->
             <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 space-y-2">
               <span class="text-[11px] font-black uppercase tracking-wider text-slate-400 block border-b border-slate-100 pb-1">
                 Course Video Index:
@@ -821,7 +820,7 @@
     </div>
   </section>
 
-  <!-- 3. EXPANDED FREE HUB SECTION (6 CARDS: 3 FREE VIDEOS & 3 FREE DOWNLOADABLE RESOURCES) -->
+  <!-- 3. FREE HUB SECTION (6 CARDS) -->
   <section id="free-hub" class="py-16 sm:py-24 bg-white border-b border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -837,7 +836,6 @@
         </p>
       </div>
 
-      <!-- Free Content Grid: 6 Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Free Card 1: Video (Checkpoint) -->
@@ -852,7 +850,7 @@
               </span>
             </div>
 
-            <!-- Video Player Shell[cite: 1] -->
+            <!-- Video Player Shell -->
             <div class="relative rounded-2xl overflow-hidden bg-slate-900 aspect-video shadow-md border-2 border-emerald-500/20 group-hover:border-emerald-500 transition">
               <iframe 
                 class="w-full h-full" 
@@ -895,7 +893,7 @@
               </span>
             </div>
 
-            <!-- Video Player Shell[cite: 1] -->
+            <!-- Video Player Shell -->
             <div class="relative rounded-2xl overflow-hidden bg-slate-900 aspect-video shadow-md border-2 border-emerald-500/20 group-hover:border-emerald-500 transition">
               <iframe 
                 class="w-full h-full" 
@@ -938,7 +936,7 @@
               </span>
             </div>
 
-            <!-- Video Player Shell[cite: 1] -->
+            <!-- Video Player Shell -->
             <div class="relative rounded-2xl overflow-hidden bg-slate-900 aspect-video shadow-md border-2 border-emerald-500/20 group-hover:border-emerald-500 transition">
               <iframe 
                 class="w-full h-full" 
@@ -1126,7 +1124,7 @@
             <h2 class="font-heading font-black text-3xl sm:text-5xl text-brand-dark">About Your Teacher</h2>
           </div>
 
-          <!-- Provided Teacher Bio Text -->
+          <!-- Bio Text -->
           <div class="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
             <p class="font-medium text-brand-dark">
               I’m Mrs. Fatma Ramadan, and I have been teaching English for over 10 years, working across British and international curricula.
@@ -1139,7 +1137,7 @@
             </p>
           </div>
 
-          <!-- Teaching Philosophy Tagline -->
+          <!-- Philosophy Tagline -->
           <div class="pt-2">
             <div class="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-brand-soft border border-brand-turquoise/30 shadow-sm text-brand-dark font-heading font-black text-sm sm:text-base tracking-wide">
               <span class="text-brand-turquoise"><i class="fa-solid fa-feather-pointed"></i></span>
@@ -1159,7 +1157,7 @@
     </div>
   </section>
 
-  <!-- Study With Me Section[cite: 1] -->
+  <!-- Study With Me Section -->
   <section id="masterclass" class="py-16 sm:py-24 bg-brand-soft border-b border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -1171,7 +1169,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- Pillar 1: Group Class[cite: 1] -->
+        <!-- Pillar 1: Group Class -->
         <div class="bg-white rounded-3xl p-8 border border-brand-border shadow-card-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
             <div class="w-14 h-14 rounded-2xl bg-brand-turquoise-light text-brand-turquoise flex items-center justify-center text-2xl group-hover:bg-brand-turquoise group-hover:text-white transition-colors duration-300">
@@ -1194,7 +1192,7 @@
           </div>
         </div>
 
-        <!-- Pillar 2: Masterclass[cite: 1] -->
+        <!-- Pillar 2: Masterclass -->
         <div class="bg-white rounded-3xl p-8 border-2 border-brand-turquoise shadow-card-hover flex flex-col justify-between group relative overflow-hidden">
           <div class="absolute top-0 right-0 bg-brand-turquoise text-white text-[11px] font-black uppercase tracking-wider px-4 py-1 rounded-bl-2xl">
             Popular
@@ -1221,7 +1219,7 @@
           </div>
         </div>
 
-        <!-- Pillar 3: Self-Paced Recorded Sessions[cite: 1] -->
+        <!-- Pillar 3: Self-Paced Recorded Sessions -->
         <div class="bg-white rounded-3xl p-8 border border-brand-border shadow-card-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-4">
             <div class="w-14 h-14 rounded-2xl bg-brand-turquoise-light text-brand-turquoise flex items-center justify-center text-2xl group-hover:bg-brand-turquoise group-hover:text-white transition-colors duration-300">
@@ -1249,7 +1247,7 @@
     </div>
   </section>
 
-  <!-- YouTube Promotion Banner[cite: 1] -->
+  <!-- YouTube Promotion Banner -->
   <section class="py-12 bg-brand-dark text-white relative overflow-hidden border-y border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
       
@@ -1273,7 +1271,7 @@
     </div>
   </section>
 
-  <!-- Footer[cite: 1] -->
+  <!-- Footer with Facebook, Instagram, YouTube & WhatsApp links -->
   <footer class="bg-white border-t border-brand-border pt-16 pb-12 text-slate-600 text-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -1309,19 +1307,47 @@
         </div>
 
         <div>
-          <h4 class="font-heading font-extrabold text-sm uppercase tracking-wider text-brand-dark mb-4">Account & Desk</h4>
+          <h4 class="font-heading font-extrabold text-sm uppercase tracking-wider text-brand-dark mb-4">Official Channels</h4>
           <ul class="space-y-2.5 text-xs font-semibold">
-            <li><a href="javascript:void(0)" onclick="openLoginModal()" class="hover:text-brand-turquoise transition-colors">Student Login</a></li>
-            <li><a href="javascript:void(0)" onclick="toggleCartModal()" class="hover:text-brand-turquoise transition-colors">View Basket</a></li>
-            <li><a href="https://wa.me/201014786466" target="_blank" class="hover:text-brand-turquoise transition-colors">WhatsApp Desk (+20 101 478 6466)</a></li>
+            <li>
+              <a href="https://www.facebook.com/royaligenglishacademy/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-facebook-f text-blue-600 w-4"></i> Facebook Community
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/royaligenglishacademy/" target="_blank" rel="noopener noreferrer" class="hover:text-pink-600 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-instagram text-pink-600 w-4"></i> Instagram Updates
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/201014786466" target="_blank" class="hover:text-emerald-600 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-emerald-600 w-4"></i> WhatsApp Desk
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" onclick="openLoginModal()" class="hover:text-brand-turquoise transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-arrow-right-to-bracket text-brand-turquoise w-4"></i> Student Portal
+              </a>
+            </li>
           </ul>
         </div>
 
       </div>
 
-      <div class="py-6 border-y border-slate-100 flex items-center justify-center gap-6 text-slate-400 text-lg">
-        <a href="https://www.youtube.com" target="_blank" class="hover:text-rose-600 transition-colors" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://wa.me/201014786466" target="_blank" class="hover:text-emerald-500 transition-colors" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <!-- Social Media Badge Row -->
+      <div class="py-6 border-y border-slate-100 flex items-center justify-center gap-5 text-slate-400 text-lg">
+        <a href="https://www.facebook.com/royaligenglishacademy/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-50 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs" title="Facebook Page">
+          <i class="fa-brands fa-facebook-f text-base"></i>
+        </a>
+        <a href="https://www.instagram.com/royaligenglishacademy/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-50 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-rose-500 hover:to-purple-600 hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs" title="Instagram Profile">
+          <i class="fa-brands fa-instagram text-base"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" class="w-10 h-10 rounded-full bg-slate-50 hover:bg-rose-600 hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs" title="YouTube Channel">
+          <i class="fa-brands fa-youtube text-base"></i>
+        </a>
+        <a href="https://wa.me/201014786466" target="_blank" class="w-10 h-10 rounded-full bg-slate-50 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs" title="WhatsApp Desk">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+        </a>
       </div>
 
       <div class="pt-8 text-center text-xs text-slate-500 space-y-1">
@@ -1332,7 +1358,7 @@
     </div>
   </footer>
 
-  <!-- Basket / Cart Drawer Modal[cite: 1] -->
+  <!-- Basket Drawer Modal -->
   <div id="cart-modal" class="fixed inset-0 z-50 hidden bg-slate-900/40 backdrop-blur-sm flex justify-end">
     <div class="bg-white w-full max-w-md h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
       <div>
@@ -1363,7 +1389,7 @@
     </div>
   </div>
 
-  <!-- Login Modal[cite: 1] -->
+  <!-- Login Modal -->
   <div id="login-modal" class="fixed inset-0 z-50 hidden bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl relative border border-brand-border">
       <button onclick="closeLoginModal()" class="absolute top-5 right-5 text-slate-400 hover:text-brand-dark p-2 cursor-pointer">
@@ -1394,13 +1420,13 @@
     </div>
   </div>
 
-  <!-- Toast Notification Container[cite: 1] -->
+  <!-- Toast Notification Container -->
   <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brand-turquoise text-white px-5 py-3 rounded-2xl shadow-2xl text-xs font-bold transition-all transform translate-y-20 opacity-0 pointer-events-none flex items-center gap-3">
     <i class="fa-solid fa-circle-check text-white text-base"></i>
     <span id="toast-text">Notification</span>
   </div>
 
-  <!-- JavaScript Functionality[cite: 1] -->
+  <!-- Core JavaScript Functionality -->
   <script>
     let cart = [];
 
@@ -1478,7 +1504,7 @@
         cart = [];
         updateCartUI();
         toggleCartModal();
-        showToast('Order received! Check your email for login details.');
+        showToast('Order received! Check your email for course details.');
       }, 1200);
     }
 
